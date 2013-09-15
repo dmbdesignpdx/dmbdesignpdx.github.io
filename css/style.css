@@ -74,6 +74,25 @@ html, body {
     z-index: 90;
 }
 
+.nextImage {
+    right:0px;
+    top:40%;
+    position: absolute;
+    height:60px;
+    cursor:pointer;
+    width:31px;
+    background: url('/images/next.png') no-repeat transparent;
+}
+.previousImage {
+    left:0px;
+    display:none;
+    top:40%;
+    position: absolute;
+    height:60px;
+    cursor:pointer;
+    width:31px;
+    background: url('/images/previous.png') no-repeat transparent;
+}
 
 .line {
     background-color: #222;
@@ -284,6 +303,10 @@ p.projtitle {
 
 @media only screen and (max-width: 500px) {
 
+body {
+    overflow: scroll;
+}
+
 .fullcontainer {
     width: 320px;
     height: 418px;
@@ -296,7 +319,7 @@ p.projtitle {
 
 .midcontainer {
     width: 320px;
-    height: 330px;
+    height: auto;
 }
 
 .botcontainer {

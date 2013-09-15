@@ -23,8 +23,9 @@ $(document).keypress(function(){
         case 113 : $("img").fadeTo(400, 1)
         break;
     }
-    //alert(event.which);
+    // alert(event.which);
 });
+
 
 function size() {
     wH = $(window).height();
@@ -169,14 +170,30 @@ $('body').on('click','.thumbBox',function(){
     currentImage = 0;
     var thumb = $(this)
     image = thumb.attr('data-images').split(',')
+    if (image.length == 1) {$(".nextImage").hide()}
+    else {$(".nextImage").show()}
     $("#projectImage").attr('src','/images/'+image[0])
     $('.projtitle').text(thumb.attr('data-title'))
     $('.projects').show();
     $('.projects').animate({top:0},1500)
 })
-$('body').on('click','.projects',function(){
+$('body').on('click','.closeProjects',function(){
     $(".projects").click(closeProject());
 })
+$('body').on('click','.closeProjects',function(){
+    $(".projects").click(closeProject());
+})
+$('body').on('click','.nextImage',function(){
+    nextImage();
+})
+$('body').on('click','.previousImage',function(){
+    prevImage();
+})
+$(document).keyup(function(e) {
+    if (e.keyCode == 27) { closeProject() }   // esc
+    if (e.keyCode == 37) { prevImage() }
+    if (e.keyCode == 39) { nextImage() }
+});
 function closeProject(){
     $('.projects').animate({top:$('body').height()},1500,function(){
         $(".projects").hide()
@@ -184,16 +201,32 @@ function closeProject(){
 
 }
 function nextImage(){
+    if(currentImage == image.length -1) {
+        return false;
+    }
     currentImage ++
+    console.log(image[currentImage])
+    console.log(currentImage)
     $("#projectImage").fadeOut(function(){
         $("#projectImage").attr('src','/images/'+image[currentImage])
         $('#projectImage').fadeIn();
     })
+    $(".previousImage").show();
+    if(currentImage == image.length -1) {
+        $(".nextImage").hide();
+    }
 }
 function prevImage(){
+    if(currentImage == 0) {
+        return false
+    }
+    $(".nextImage").show();
     currentImage --
     $("#projectImage").fadeOut(function(){
         $("#projectImage").attr('src','/images/'+image[currentImage])
         $('#projectImage').fadeIn();
     })
+    if (currentImage == 0) {
+        $(".previousImage").hide();        
+    }
 }

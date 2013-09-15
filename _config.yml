@@ -1,3 +1,4 @@
 name: DMB DESIGN | Graphic Design + Advertising
+permalink: /blog/:title
 markdown: redcarpet
 pygments: true
