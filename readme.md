@@ -20,6 +20,13 @@ Note: All of your changes will take a little bit to get built by Github.
 - Save/Commit the file
 
 ## How to add/modify files on your computer
+- Open up Terminal and run these commands
+
+```
+  cd ~/Documents/site
+  git pull --rebase origin master
+  git push origin
+```
 
 - Make any changes you'd like to make
 - Open up Terminal and run the following commands
