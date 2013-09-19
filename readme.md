@@ -23,6 +23,7 @@ Note: All of your changes will take a little bit to get built by Github.
 
 - Make any changes you'd like to make
 - Open up Terminal and run the following commands
+
 ```
   cd ~/Documents/site
   git add .
