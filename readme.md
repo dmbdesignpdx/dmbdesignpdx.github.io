@@ -12,7 +12,7 @@ Note: All of your changes will take a little bit to get built by Github.
 - If you'd like to upload an image, click the image button to upload or link to an image in your post
 - Save the changes, refresh the page, and then hit "Publish". The post will now be on your site
 
-## How to modify the HTML/CSS/Javascript with Prose
+## Modifying HTML/CSS/Javascript with Prose
 
 - Go to [Prose.io](http://prose.io)
 - Navigate to the file you'd like to change
