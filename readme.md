@@ -51,4 +51,4 @@ Note: All of your changes will take a little bit to get built by Github.
 
 Visit the site at http://localhost:4000
 
-When you are ready to update the site, go back into terminal and press controal+c to stop the server. You can then update the code as per the instructions above.
+When you are ready to update the site, go back into terminal and press control+c to stop the server. You can then update the code as per the instructions above.
