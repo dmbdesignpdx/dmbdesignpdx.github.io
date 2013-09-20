@@ -38,3 +38,17 @@ Note: All of your changes will take a little bit to get built by Github.
   git commit -m "Updated files locally"
   git push origin
 ```
+
+## Running the site locally
+
+- Open up Terminal and run the following commands
+
+```
+  cd ~/Documents/site
+  jekyll serve --watch
+```
+- This will start the web site on your computer
+
+Visit the site at http://localhost:4000
+
+When you are ready to update the site, go back into terminal and press controal+c to stop the server. You can then update the code as per the instructions above.
