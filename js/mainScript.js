@@ -170,12 +170,13 @@ $('body').on('click','.thumbBox',function(){
     currentImage = 0;
     var thumb = $(this)
     image = thumb.attr('data-images').split(',')
-    if (image.length == 1) {$(".nextImage").hide()}
+    if (image.length == 1) {$(".nextImage",".previousImage").hide()}
     else {$(".nextImage").show()}
     $("#projectImage").attr('src','/images/'+image[0])
     $('.projtitle').text(thumb.attr('data-title'))
     $('.projects').show();
-    $('.projects').animate({top:0},1500)
+    $('.projects').animate({top:0},1500);
+  	projResize();
 })
 $('body').on('click','.closeProjects',function(){
     $(".projects").click(closeProject());
