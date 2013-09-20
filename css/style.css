@@ -75,7 +75,7 @@ html, body {
 }
 
 .nextImage {
-    right:0px;
+    right:10px;
     top:40%;
     position: absolute;
     height:60px;
@@ -84,7 +84,7 @@ html, body {
     background: url('/images/next.png') no-repeat transparent;
 }
 .previousImage {
-    left:0px;
+    left:10px;
     display:none;
     top:40%;
     position: absolute;
