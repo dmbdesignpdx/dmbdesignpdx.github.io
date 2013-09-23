@@ -72,6 +72,9 @@ html, body {
     margin: 0;
     background-color: black;
     z-index: 90;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
 
 .nextImage {
@@ -82,7 +85,17 @@ html, body {
     cursor:pointer;
     width:31px;
     background: url('/images/next.png') no-repeat transparent;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
+.nextImage:hover {
+    opacity: .5;
+}
+.previousImage:hover {
+    opacity: .5;
+}
+
 .previousImage {
     left:10px;
     display:none;

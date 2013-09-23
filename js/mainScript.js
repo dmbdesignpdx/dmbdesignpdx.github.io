@@ -90,11 +90,6 @@ $(".thumbBox").hover(function() {
     $("img").stop().fadeTo(400, 1);
 });
 
-$(".closeProjects, .nextImage, .previousImage").hover(function(){
-    $(this).fadeTo(100, .5);
-    },function(){
-    $(this).fadeTo(100, 1);
-});
 
 function showAbout() {
     if(!aboutInfo) {
@@ -181,21 +176,20 @@ function closeProject(){
 
 function nextImage(){
     if(currentImage == image.length -1) {
-        $(".nextImage").hide();
         return false;
     }
     currentImage ++
-    console.log(image[currentImage])
-    console.log(currentImage)
     $("#projectImage").fadeOut(function(){
         $("#projectImage").attr('src','/images/'+image[currentImage])
         $('#projectImage').fadeIn();
     })
     $(".previousImage").show();
+    if(currentImage == image.length -1) {
+        $(".nextImage").hide();
+    }
 }
 function prevImage(){
     if(currentImage == 0) {
-        $(".previousImage").hide();  
         return false
     }
     $(".nextImage").show();
@@ -204,4 +198,7 @@ function prevImage(){
         $("#projectImage").attr('src','/images/'+image[currentImage])
         $('#projectImage').fadeIn();
     })
+    if(currentImage == 0) {
+        $(".previousImage").hide();  
+    }
 }
