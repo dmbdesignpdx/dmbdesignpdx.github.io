@@ -75,8 +75,8 @@ html, body {
 }
 
 .nextImage {
-    right:10px;
-    top:40%;
+    right:0px;
+    top:50%;
     position: absolute;
     height:60px;
     cursor:pointer;
@@ -86,7 +86,7 @@ html, body {
 .previousImage {
     left:10px;
     display:none;
-    top:40%;
+    top:50%;
     position: absolute;
     height:60px;
     cursor:pointer;
@@ -222,7 +222,7 @@ h2.dmbDesignSub {
     position: relative;
     margin-top: 0px;
     margin-left: 4px;
-    width: 150px;
+    width: 300px;
 }
 
 p {
@@ -244,6 +244,7 @@ p.pinfo {
     font-size: .9em;
     font-weight: 400;
     margin: 10px 0px 0px 10px;
+    letter-spacing: .06em;
     position: relative;
 }
 

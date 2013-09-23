@@ -6,25 +6,6 @@ var mainPosSmall = Math.round((wH - 418) / 2);
 var projImageHeight, projImageHeightDivided, windowHeightDivided, projImagePosition;
 var thisProjImg;
 var thisThumb;
-//var posters = false;
-
-$(document).keypress(function(){
-    switch(event.which) {
-        case 112 : $("img").fadeTo(400, 1), $("img").not($("img[class=poster]")).fadeTo(400, .1)
-        break;
-        case 105 : $("img").fadeTo(400, 1), $("img").not($("img[class=packaging]")).fadeTo(400, .1)
-        break;
-        case 97 : $("img").fadeTo(400, 1), $("img").not($("img[class=advertising]")).fadeTo(400, .1)
-        break;
-        case 109 : $("img").fadeTo(400, 1), $("img").not($("img[class=misc]")).fadeTo(400, .1)
-        break;
-        case 100 : $("img").fadeTo(400, 1), $("img").not($("img[class=digital]")).fadeTo(400, .1)
-        break;
-        case 113 : $("img").fadeTo(400, 1)
-        break;
-    }
-    // alert(event.which);
-});
 
 
 function size() {
@@ -63,14 +44,6 @@ function size() {
     containerPos();
 }
 
-function projResize() {
-    projImageHeight = $(".projects").children("img").height();
-    projImageHeightDivided = projImageHeight/2;
-    windowHeightDivided = wH/2;
-    projImagePosition = windowHeightDivided - projImageHeightDivided;
-    $(".projects").children("img").css('margin-top', projImagePosition+'px');
-}
-
 function containerPos() {
     if(wH > 650) {
         $(".fullcontainer").css('margin-top', (mainPos - 10)+'px');
@@ -101,7 +74,7 @@ $(".thumbBox").hover(function() {
             break;
             case "adver": $(".dmbDesignSub").show().html("Advertising").css('color','#53bcb1');
             break;
-            case "packid": $(".dmbDesignSub").show().html("Packaging").css('color','#537dbc');
+            case "packid": $(".dmbDesignSub").show().html("Packaging + Identity").css('color','#537dbc');
             break;
             case "poster": $(".dmbDesignSub").show().html("Posters").css('color','#67bc53');
             break;
@@ -117,7 +90,7 @@ $(".thumbBox").hover(function() {
     $("img").stop().fadeTo(400, 1);
 });
 
-$(".closeProjects").hover(function(){
+$(".closeProjects, .nextImage, .previousImage").hover(function(){
     $(this).fadeTo(100, .5);
     },function(){
     $(this).fadeTo(100, 1);
@@ -138,6 +111,8 @@ function showAbout() {
         aboutInfo = false;
     }
 }
+
+
 
 function hoverOver() {
     $(this).css('color', '#666');
@@ -165,19 +140,21 @@ containerPos();
 
 var currentImage = 0;
 var image = [];
+var title = [];
 
 $('body').on('click','.thumbBox',function(){
     currentImage = 0;
     var thumb = $(this)
     image = thumb.attr('data-images').split(',')
-    if (image.length == 1) {$(".nextImage",".previousImage").hide()}
-    else {$(".nextImage").show()}
+    if (image.length == 1) {$(".nextImage, .previousImage").hide();}
+    else {$(".nextImage").show(); $(".previousImage").hide();}
     $("#projectImage").attr('src','/images/'+image[0])
     $('.projtitle').text(thumb.attr('data-title'))
     $('.projects').show();
     $('.projects').animate({top:0},1500);
-  	projResize();
+
 })
+
 $('body').on('click','.closeProjects',function(){
     $(".projects").click(closeProject());
 })
@@ -201,8 +178,10 @@ function closeProject(){
     })
 
 }
+
 function nextImage(){
     if(currentImage == image.length -1) {
+        $(".nextImage").hide();
         return false;
     }
     currentImage ++
@@ -213,12 +192,10 @@ function nextImage(){
         $('#projectImage').fadeIn();
     })
     $(".previousImage").show();
-    if(currentImage == image.length -1) {
-        $(".nextImage").hide();
-    }
 }
 function prevImage(){
     if(currentImage == 0) {
+        $(".previousImage").hide();  
         return false
     }
     $(".nextImage").show();
@@ -227,7 +204,4 @@ function prevImage(){
         $("#projectImage").attr('src','/images/'+image[currentImage])
         $('#projectImage').fadeIn();
     })
-    if (currentImage == 0) {
-        $(".previousImage").hide();        
-    }
 }
