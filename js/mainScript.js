@@ -7,7 +7,6 @@ var projImageHeight, projImageHeightDivided, windowHeightDivided, projImagePosit
 var thisProjImg;
 var thisThumb;
 
-
 function size() {
     wH = $(window).height();
     wW = $(window).width();
@@ -62,34 +61,20 @@ $(".thumbBox").hover(function() {
     var prevDiv = $("#second", "#"+divMin);
     var thisDivName = $(this).attr('name');
     if(!smallScreen) {
-        $("img").not($("img", this)).not($(".projects")).stop().fadeTo(400, .3);
+        $("img").not($("img", this)).not($(".projects")).stop().fadeTo(400, .08);
         if(this.id != "5" || this.id != "10" || this.id != "15") {
             nextDiv.stop().animate({top: "0px"}, 400);
         }
         if(this.id == "5" || this.id == "10" || this.id == "15") {
             prevDiv.stop().animate({top: "0px"}, 400);
         }
-        switch(thisDivName) {
-            case "dig": $(".dmbDesignSub").show().html("Digital").css('color','#bc5353');
-            break;
-            case "adver": $(".dmbDesignSub").show().html("Advertising").css('color','#53bcb1');
-            break;
-            case "packid": $(".dmbDesignSub").show().html("Packaging + Identity").css('color','#537dbc');
-            break;
-            case "poster": $(".dmbDesignSub").show().html("Posters").css('color','#67bc53');
-            break;
-            case "misc": $(".dmbDesignSub").show().html("Misc.").css('color','#777');
-            break;
-        }
     }
 }, function() {
     if(!smallScreen) {
         $("div[class*=Info], #first, #second").stop().animate({top: "-140px"}, 400);
     }
-    $(".dmbDesignSub").hide();
     $("img").stop().fadeTo(400, 1);
 });
-
 
 function showAbout() {
     if(!aboutInfo) {
@@ -105,27 +90,19 @@ function showAbout() {
         }
         aboutInfo = false;
     }
-}
+};
 
-
-
-function hoverOver() {
-    $(this).css('color', '#666');
-}
-
-function hoverOut() {
-    $(this).css('color', '#222');
-}
+$(".dinfo").hover(function() {
+    $(this).css('color', '#888');  
+}, function() {
+    $(this).css('color', '#444');
+});
 
 $(window).resize(function() {
     size();
 });
 
-$(".dinfo, .dmbDesign").click(showAbout);
-
-$(".dinfo, .dmbDesign, .mobileinfo").hover(hoverOver, hoverOut);
-
-$(".dmbDesignSub").hide();
+$(".dinfo").click(showAbout);
 
 size();
 
@@ -148,11 +125,8 @@ $('body').on('click','.thumbBox',function(){
     $('.projects').show();
     $('.projects').animate({top:0},1500);
 
-})
+});
 
-$('body').on('click','.closeProjects',function(){
-    $(".projects").click(closeProject());
-})
 $('body').on('click','.closeProjects',function(){
     $(".projects").click(closeProject());
 })
@@ -188,6 +162,7 @@ function nextImage(){
         $(".nextImage").hide();
     }
 }
+
 function prevImage(){
     if(currentImage == 0) {
         return false

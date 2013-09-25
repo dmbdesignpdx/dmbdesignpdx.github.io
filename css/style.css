@@ -8,19 +8,6 @@ html, body {
     height: 100%;
 }
 
-
-.closeProjects {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    z-index: 99;
-    float: right;
-    top: 0px;
-    right: 0px;
-    background-image: url("/images/close3.png");
-    cursor: pointer;
-}
-
 .fullcontainer {
     width: 800px;
     height: 590px;
@@ -72,14 +59,11 @@ html, body {
     margin: 0;
     background-color: black;
     z-index: 90;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
 }
 
 .nextImage {
     right:0px;
-    top:50%;
+    top:45%;
     position: absolute;
     height:60px;
     cursor:pointer;
@@ -89,6 +73,36 @@ html, body {
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 }
+
+.previousImage {
+    left:10px;
+    display:none;
+    top:45%;
+    position: absolute;
+    height:60px;
+    cursor:pointer;
+    width:31px;
+    background: url('/images/previous.png') no-repeat transparent;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.closeProjects {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    z-index: 99;
+    float: right;
+    top: 0px;
+    right: 0px;
+    background-image: url("/images/close3.png");
+    cursor: pointer;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
 .nextImage:hover {
     opacity: .5;
 }
@@ -96,19 +110,12 @@ html, body {
     opacity: .5;
 }
 
-.previousImage {
-    left:10px;
-    display:none;
-    top:50%;
-    position: absolute;
-    height:60px;
-    cursor:pointer;
-    width:31px;
-    background: url('/images/previous.png') no-repeat transparent;
+.closeProjects:hover {
+    opacity: .5;
 }
 
 .line {
-    background-color: #222;
+    background-color: #777;
     width: 780px;
     height: 1px;
     position: relative;
@@ -118,7 +125,7 @@ html, body {
 }
 
 .line2 {
-    background-color: #222;
+    background-color: #777;
     width: 780px;
     height: 1px;
     position: relative;
@@ -139,13 +146,10 @@ html, body {
     cursor: pointer;
 }
 
-
-
-
 .posterInfo {
     width: 140px;
     height:140px;
-    background-color: #83d045;
+    background-color: #a5cc66;
     position: absolute;
     float: left;
     display: block;
@@ -156,7 +160,7 @@ html, body {
 .packidInfo {
     width: 140px;
     height:140px;
-    background-color: #537dbc;
+    background-color: #759fbc;
     position: absolute;
     float: left;
     display: block;
@@ -167,7 +171,7 @@ html, body {
 .digitalInfo {
     width: 140px;
     height:140px;
-    background-color: #bc5353;
+    background-color: #de6464;
     position: absolute;
     float: left;
     display: block;
@@ -178,7 +182,7 @@ html, body {
 .adverInfo {
     width: 140px;
     height:140px;
-    background-color: #53bcb1;
+    background-color: #64bcc2;
     position: absolute;
     float: left;
     display: block;
@@ -189,7 +193,18 @@ html, body {
 .miscInfo {
     width: 140px;
     height:140px;
-    background-color: #777;
+    background-color: #555577;
+    position: absolute;
+    float: left;
+    display: block;
+    top: -140px;
+    overflow: hidden;
+}
+
+.projInfo {
+    width: 140px;
+    height:140px;
+    background-color: #de6464;
     position: absolute;
     float: left;
     display: block;
@@ -206,7 +221,7 @@ div span {
 
 h1.dmbDesign {
     font-family: 'News Cycle', sans-serif;
-    color: #222;
+    color: #444;
     height: 2em;
     font-size: 1.6em;
     letter-spacing: .01em;
@@ -218,24 +233,7 @@ h1.dmbDesign {
     margin-left: 10px;
     margin-right: 0px;
     float: left;
-    cursor: pointer;
-    width: 142px;
-}
-
-h2.dmbDesignSub {
-    font-family: 'News Cycle', sans-serif;
-    color: #222;
-    height: 2em;
-    font-size: 1.6em;
-    letter-spacing: .01em;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: left;
-    float: left;
-    position: relative;
-    margin-top: 0px;
-    margin-left: 4px;
-    width: 300px;
+    width: auto;
 }
 
 p {
@@ -245,7 +243,7 @@ p {
     text-align: left;
     text-transform: uppercase;
     display: block;
-    color: #222;
+    color: #444;
     letter-spacing: .02em;
     line-height: 1em;
 
@@ -256,14 +254,24 @@ p.pinfo {
     color: #eee;
     font-size: .9em;
     font-weight: 400;
-    margin: 10px 0px 0px 10px;
     letter-spacing: .06em;
-    position: relative;
+    position: absolute;
+    height: auto;
+    width: 120px;
+    top: -5px;
+    left: 10px;
 }
 
-
-
-
+p.pinfoTwo {
+    color: #eee;
+    font-size: .7em;
+    font-weight: 400;
+    letter-spacing: .06em;
+    position: absolute;
+    height: auto;
+    bottom: -3px;
+    left: 10px;
+}
 
 p.about {
     font-weight: 400;
@@ -276,7 +284,7 @@ p.about {
 }
 
 p.dinfo {
-    width: 35px;
+    width: auto;
     font-weight: 400;
     margin-top: 0px;
     margin-left: 10px;
