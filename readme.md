@@ -1,4 +1,4 @@
-# DMB Designs
+# Daniel Blake Designs
 
 Note: All of your changes will take a little bit to get built by Github.
 
