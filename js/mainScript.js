@@ -31,11 +31,9 @@ function size() {
     }
     if(smallScreen) {
         $(".dmbAbout").css('bottom', '-330px');
-        $(".mobileinfo").show();
     }
     else {
         $(".dmbAbout").css('bottom', '-500px');
-        $(".mobileinfo").hide();
     }
     if((smallScreen && aboutInfo) || (!smallScreen && aboutInfo)) {
         $(".dmbAbout").css('bottom', '0px');
@@ -80,6 +78,7 @@ function showAbout() {
     if(!aboutInfo) {
         $(".dmbAbout").animate({bottom: "0px"}, 1000);
         aboutInfo = true;
+        $(".dinfo").html("CLOSE");
     }
     else {
         if(!smallScreen) {
@@ -89,6 +88,7 @@ function showAbout() {
             $(".dmbAbout").animate({bottom: "-330px"}, 1000);   
         }
         aboutInfo = false;
+        $(".dinfo").html("ABOUT");
     }
 };
 
@@ -124,29 +124,32 @@ $('body').on('click','.thumbBox',function(){
     $('.projtitle').text(thumb.attr('data-title'))
     $('.projects').show();
     $('.projects').animate({top:0},1500);
-
 });
 
 $('body').on('click','.closeProjects',function(){
     $(".projects").click(closeProject());
-})
+});
+
 $('body').on('click','.nextImage',function(){
     nextImage();
-})
+});
+
 $('body').on('click','.previousImage',function(){
     prevImage();
-})
+});
+
 $(document).keyup(function(e) {
     if (e.keyCode == 27) { closeProject() }   // esc
     if (e.keyCode == 37) { prevImage() }
     if (e.keyCode == 39) { nextImage() }
 });
+
 function closeProject(){
     $('.projects').animate({top:$('body').height()},1500,function(){
         $(".projects").hide()
     })
 
-}
+};
 
 function nextImage(){
     if(currentImage == image.length -1) {
@@ -161,7 +164,7 @@ function nextImage(){
     if(currentImage == image.length -1) {
         $(".nextImage").hide();
     }
-}
+};
 
 function prevImage(){
     if(currentImage == 0) {
@@ -176,4 +179,4 @@ function prevImage(){
     if(currentImage == 0) {
         $(".previousImage").hide();  
     }
-}
+};

@@ -292,19 +292,6 @@ p.dinfo {
     cursor: pointer;
 }
 
-p.mobileinfo {
-    width: 114px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-right: 10px;
-    margin-left: 0px;
-    position: relative;
-    cursor: pointer;
-    text-align: right;
-    float: right;
-}
-
-
 p.projtitle {
     color: #eee;
     font-size: .8em;
@@ -318,6 +305,11 @@ p.projtitle {
     display: block;
     text-align: left;
     float: left;
+}
+
+a:link {
+    text-decoration: none;
+    color: #444;
 }
 
 
