@@ -307,9 +307,10 @@ p.dinfo {
     width: auto;
     font-weight: 400;
     margin-top: 0px;
-    margin-left: 10px;
+    margin-right: 10px;
     position: relative;
     cursor: pointer;
+    float: right;
 }
 
 p.projtitle {
