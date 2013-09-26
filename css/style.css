@@ -242,16 +242,15 @@ div span {
 h1.dmbDesign {
     font-family: 'News Cycle', sans-serif;
     color: #444;
-    height: 2em;
+    height: 100%;
     font-size: 1.6em;
     letter-spacing: .01em;
     text-transform: uppercase;
     font-weight: 700;
     text-align: left;
-    position: relative;
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-right: 0px;
+    position: absolute;
+    top: -16px;
+    left: 10px;
     float: left;
     width: auto;
 }
@@ -305,10 +304,11 @@ p.about {
 
 p.dinfo {
     width: auto;
+    height: 100%;
     font-weight: 400;
     font-size: 1.2em;
-    margin-top: 10px;
-    margin-right: 10px;
+    top: -4px;
+    right: 10px;
     position: relative;
     cursor: pointer;
     float: right;
