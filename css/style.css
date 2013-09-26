@@ -114,6 +114,26 @@ html, body {
     opacity: .5;
 }
 
+.linkedin:hover {
+    opacity: .75;
+}
+
+.linkedin {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 98;
+    float: right;
+    right: 10px;
+    cursor: pointer;
+    background-image: url("/images/linkedin.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
 .line {
     background-color: #777;
     width: 780px;
