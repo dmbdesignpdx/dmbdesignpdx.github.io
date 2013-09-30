@@ -342,7 +342,6 @@ a:hover {
 }
 
 
-
 @media only screen and (max-width: 500px) {
 
 body {
@@ -352,6 +351,7 @@ body {
 .fullcontainer {
     width: 320px;
     height: 418px;
+    margin-top: 0px;
 }
 
 .topcontainer {
@@ -381,7 +381,7 @@ body {
 
 .dmbAbout {
     width: 320px;
-    height: 330px;
+    height: 960px;
     bottom: -330px;
 }
 
@@ -391,12 +391,24 @@ p.about {
 }
 
 p.dinfo {
-    margin-top: 1px;
+    top: -4px;
+    right: 10px;
 }
 
-p.mobileinfo {
-    margin-top: 1px;
+h1.dmbDesign {
+    font-size: 1.4em;
+    top: -9px;
+    left: 10px;
 }
 
+.linkedin {
+    top: 4px;
+}
+
+.closeProjects {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+}
 
 }
