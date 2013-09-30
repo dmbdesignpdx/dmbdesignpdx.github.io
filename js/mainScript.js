@@ -124,7 +124,7 @@ $('body').on('click','.thumbBox',function(){
     $("#projectImage").attr('src','/images/'+image[0])
     $('.projtitle').text(thumb.attr('data-title'))
     $('.projects').show();
-    $('.projects').animate({top:0},1500);
+    $('.projects').stop().animate({top:0},1500);
 });
 
 $('body').on('click','.closeProjects',function(){
