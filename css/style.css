@@ -129,9 +129,6 @@ html, body {
     background-image: url("/images/linkedin.png");
     background-size: 20px 20px;
     background-repeat: no-repeat;
-    transition: opacity .25s ease-in-out;
-    -moz-transition: opacity .25s ease-in-out;
-    -webkit-transition: opacity .25s ease-in-out;
 }
 
 .line {
@@ -335,6 +332,14 @@ a:link {
     color: #444;
 }
 
+a:visited {
+    text-decoration: none;
+    color: #444;
+}
+
+a:hover {
+    color: #888;
+}
 
 
 

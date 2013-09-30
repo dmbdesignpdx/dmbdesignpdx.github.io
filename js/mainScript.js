@@ -117,12 +117,12 @@ var title = [];
 
 $('body').on('click','.thumbBox',function(){
     currentImage = 0;
-    var thumb = $(this)
-    image = thumb.attr('data-images').split(',')
+    var thumb = $(this);
+    image = thumb.attr('data-images').split(',');
     if (image.length == 1) {$(".nextImage, .previousImage").hide();}
     else {$(".nextImage").show(); $(".previousImage").hide();}
     $("#projectImage").attr('src','/images/'+image[0])
-    $('.projtitle').text(thumb.attr('data-title'))
+    $('.projtitle').text(thumb.attr('data-title'));
     $('.projects').show();
     $('.projects').stop().animate({top:0},1500);
 });
@@ -147,7 +147,7 @@ $(document).keyup(function(e) {
 
 function closeProject(){
     $('.projects').animate({top:$('body').height()},1500,function(){
-        $(".projects").hide()
+        $(".projects").hide();
     })
 
 };
