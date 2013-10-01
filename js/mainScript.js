@@ -1,4 +1,4 @@
-var aboutInfo, projShowing, smallScreen = false;
+var aboutInfo, projShowing, smallScreen, mediumScreen = false;
 var wH = $(window).height();
 var wW = $(window).width();
 var mainPos = Math.round((wH - 590) / 2);
@@ -7,40 +7,44 @@ var projImageHeight, projImageHeightDivided, windowHeightDivided, projImagePosit
 var thisProjImg;
 var thisThumb;
 
-
 function size() {
     wH = $(window).height();
     wW = $(window).width();
     mainPos = Math.round((wH - 590) / 2);
-    mainPosSmall = Math.round((wH - 418) / 2);
-    if(!projShowing) {
-        $(".projects").css({height: wH+'px', width: wW+'px', top: wH+'px'});
-    }
-    else {
-        $(".projects").css({height: wH+'px', width: wW+'px', top: '0px'});
-        projImageHeight = $(".projects").children("img").height();
-        projImageHeightDivided = projImageHeight/2;
-        windowHeightDivided = wH/2;
-        projImagePosition = windowHeightDivided - projImageHeightDivided;
-        $(".projects").css('margin-top', projImagePosition+'px');
-    }
-    if(wW < 501) {
+    if(wW < 505) {
         smallScreen = true;
     }
     else {
         smallScreen = false;
     }
-    if(smallScreen) {
-        $(".dmbAbout").css('bottom', '-960px');
-        $("#13").hide();
-        $("#14").hide();
-        $("#15").hide();
+    if(wW > 506 && wW < 810){
+        mediumScreen = true;
     }
     else {
-        $(".dmbAbout").css('bottom', '-500px');
-        $("#13").show();
-        $("#14").show();
-        $("#15").show();
+        mediumScreen = false;
+    }
+    if(!projShowing) {
+        $(".projects").css({height: wH+'px', width: wW+'px', top: wH+'px'});
+    }
+    else {
+        $(".projects").css({height: wH+'px', width: wW+'px', top: '0px'});
+    }
+    switch (true) {
+        case smallScreen :
+            $(".dmbAbout").css('bottom', '-960px');
+            $("#13").hide();
+            $("#14").hide();
+            $("#15").hide();
+            break;
+        case mediumScreen :
+            $(".dmbAbout").css('bottom', '-800px');
+            break;
+        default :
+            $(".dmbAbout").css('bottom', '-500px');
+            $("#13").show();
+            $("#14").show();
+            $("#15").show();
+            break;
     }
     if((smallScreen && aboutInfo) || (!smallScreen && aboutInfo)) {
         $(".dmbAbout").css('bottom', '0px');
@@ -65,7 +69,7 @@ $(".thumbBox").hover(function() {
     var nextDiv = $("div[class*=Info]", "#"+divPlus);
     var prevDiv = $("#second", "#"+divMin);
     var thisDivName = $(this).attr('name');
-    if(!smallScreen) {
+    if(!smallScreen && !mediumScreen) {
         $("img").not($("img", this)).not($(".projects")).stop().fadeTo(400, .08);
         if(this.id != "5" || this.id != "10" || this.id != "15") {
             nextDiv.stop().animate({top: "0px"}, 400);
@@ -75,7 +79,7 @@ $(".thumbBox").hover(function() {
         }
     }
 }, function() {
-    if(!smallScreen) {
+    if(!smallScreen && !mediumScreen) {
         $("div[class*=Info], #first, #second").stop().animate({top: "-140px"}, 400);
     }
     $("img").stop().fadeTo(400, 1);
@@ -88,14 +92,19 @@ function showAbout() {
         $(".dinfo").html("CLOSE");
     }
     else {
-        if(!smallScreen) {
-            $(".dmbAbout").animate({bottom: "-500px"}, 1200);
-        }
-        else {
-            $(".dmbAbout").animate({bottom: "-960px"}, 1200);   
-        }
         aboutInfo = false;
         $(".dinfo").html("ABOUT");
+        switch(true) {
+            case smallScreen :
+                $(".dmbAbout").animate({bottom: "-960px"}, 1200);
+                break;
+            case mediumScreen :
+                 $(".dmbAbout").animate({bottom: "-800px"}, 1200);
+                 break;
+            default :
+                $(".dmbAbout").animate({bottom: "-500px"}, 1200);
+                break;
+        }
     }
 };
 
@@ -131,6 +140,7 @@ $('body').on('click','.thumbBox',function(){
     $('.projtitle').text(thumb.attr('data-title'));
     $('.projects').show();
     $('.projects').stop().animate({top:0},1500);
+    projShowing = true;
 });
 
 $('body').on('click','.closeProjects',function(){
@@ -154,6 +164,7 @@ $(document).keyup(function(e) {
 function closeProject(){
     $('.projects').animate({top:$('body').height()},1500,function(){
         $(".projects").hide();
+        projShowing = false;
     })
 
 };

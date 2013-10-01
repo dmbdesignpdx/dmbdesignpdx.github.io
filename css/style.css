@@ -342,7 +342,7 @@ a:hover {
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 505px) {
 
 body {
     overflow: scroll;
@@ -350,7 +350,7 @@ body {
 
 .fullcontainer {
     width: 320px;
-    height: 418px;
+    height: auto;
     margin-top: 0px;
 }
 
@@ -388,6 +388,80 @@ body {
 p.about {
     width: 280px;
     margin: 10px 0px 0px 10px;
+}
+
+p.dinfo {
+    top: -4px;
+    right: 10px;
+}
+
+h1.dmbDesign {
+    font-size: 1.4em;
+    top: -9px;
+    left: 10px;
+}
+
+.linkedin {
+    top: 4px;
+}
+
+.closeProjects {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+}
+
+}
+
+
+
+
+@media only screen and (min-width: 506px) and (max-width: 810px) {
+
+body {
+    overflow: scroll;
+}
+
+.fullcontainer {
+    width: 480px;
+    height: auto;
+    margin-top: 0px;
+}
+
+.topcontainer {
+    width: 480px;
+    height: 38px;
+}
+
+.midcontainer {
+    width: 480px;
+    height: auto;
+}
+
+.botcontainer {
+    width: 480px;
+    height: 50px;
+}
+
+.line {
+    width: 460px;
+    margin-bottom: 10px;
+}
+
+.line2 {
+    width: 460px;
+    margin-bottom: 2px;
+}
+
+.dmbAbout {
+    width: 480px;
+    height: 800px;
+    bottom: -800px;
+}
+
+p.about {
+    width: 440px;
+    margin: 20px 0px 0px 20px;
 }
 
 p.dinfo {
