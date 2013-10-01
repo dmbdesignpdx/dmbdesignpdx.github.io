@@ -7,6 +7,7 @@ var projImageHeight, projImageHeightDivided, windowHeightDivided, projImagePosit
 var thisProjImg;
 var thisThumb;
 
+
 function size() {
     wH = $(window).height();
     wW = $(window).width();
