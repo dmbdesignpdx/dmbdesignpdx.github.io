@@ -149,7 +149,7 @@ html, body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .thumbBox {
@@ -237,7 +237,7 @@ div span {
 
 
 
-h1.dmbDesign {
+h1.DanielBlakeDesign {
     font-family: 'News Cycle', sans-serif;
     color: #444;
     height: 100%;
@@ -247,10 +247,11 @@ h1.dmbDesign {
     font-weight: 700;
     text-align: left;
     position: absolute;
-    top: -16px;
+    top: 2px;
     left: 10px;
     float: left;
     width: auto;
+    margin: 0;
 }
 
 p {
@@ -279,7 +280,7 @@ p.pinfo {
     left: 10px;
 }
 
-p.about {
+p.AboutDanielBlakeDesign {
     font-weight: 400;
     line-height: 1.2em;
     width: 662px;
@@ -294,12 +295,13 @@ p.dinfo {
     height: 100%;
     font-weight: 400;
     font-size: 1.2em;
-    top: -4px;
+    top: 16px;
     right: 10px;
-    position: relative;
+    position: absolute;
     cursor: pointer;
     float: right;
     text-align: right;
+    margin: 0;
 }
 
 p.projtitle {
@@ -381,13 +383,13 @@ p.about {
 }
 
 p.dinfo {
-    top: -4px;
+    top: 15px;
     right: 10px;
 }
 
-h1.dmbDesign {
+h1.DanielBlakeDesign {
     font-size: 1.4em;
-    top: -9px;
+    top: 5px;
     left: 10px;
 }
 
@@ -455,13 +457,12 @@ p.about {
 }
 
 p.dinfo {
-    top: -4px;
+    top: 15px;
     right: 10px;
 }
 
-h1.dmbDesign {
-    font-size: 1.4em;
-    top: -9px;
+h1.DanielBlakeDesign {
+    top: 1px;
     left: 10px;
 }
 
