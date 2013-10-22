@@ -140,9 +140,7 @@ $('body').on('click','.thumbBox',function(){
     $("#projectImage").attr('src','/images/'+image[0])
     $('.projtitle').text(thumb.attr('data-title'));
     $('.projects').show();
-    $('.projects').stop().animate({top:0},1500,function(){
-        $("projectImage").fadeIn();    
-    });
+    $('.projects').stop().animate({top:0},1500);
     projShowing = true;
 });
 
@@ -179,7 +177,6 @@ function nextImage(){
     };
     currentImage ++;
     $("#projectImage").fadeOut(function(){
-        $("#projectImage").hide();
         $("#projectImage").attr('src','/images/'+image[currentImage]);
         $('#projectImage').fadeIn();
     });
@@ -196,7 +193,6 @@ function prevImage(){
     $(".nextImage").show();
     currentImage --;
     $("#projectImage").fadeOut(function(){
-        $("#projectImage").hide();
         $("#projectImage").attr('src','/images/'+image[currentImage]);
         $('#projectImage').fadeIn();
     });
