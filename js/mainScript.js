@@ -140,7 +140,9 @@ $('body').on('click','.thumbBox',function(){
     $("#projectImage").attr('src','/images/'+image[0])
     $('.projtitle').text(thumb.attr('data-title'));
     $('.projects').show();
-    $('.projects').stop().animate({top:0},1500);
+    $('.projects').stop().animate({top:0},1500,function(){
+        $("projectImage").fadeIn();    
+    });
     projShowing = true;
 });
 
@@ -163,39 +165,42 @@ $(document).keyup(function(e) {
 });
 
 function closeProject(){
+    $("#projectImage").fadeOut();
     $('.projects').animate({top:$('body').height()},1500,function(){
         $(".projects").hide();
         projShowing = false;
-    })
+    });
 
 };
 
 function nextImage(){
     if(currentImage == image.length -1) {
         return false;
-    }
-    currentImage ++
+    };
+    currentImage ++;
     $("#projectImage").fadeOut(function(){
-        $("#projectImage").attr('src','/images/'+image[currentImage])
+        $("#projectImage").hide();
+        $("#projectImage").attr('src','/images/'+image[currentImage]);
         $('#projectImage').fadeIn();
-    })
+    });
     $(".previousImage").show();
     if(currentImage == image.length -1) {
         $(".nextImage").hide();
-    }
+    };
 };
 
 function prevImage(){
     if(currentImage == 0) {
-        return false
-    }
+        return false;
+    };
     $(".nextImage").show();
-    currentImage --
+    currentImage --;
     $("#projectImage").fadeOut(function(){
-        $("#projectImage").attr('src','/images/'+image[currentImage])
+        $("#projectImage").hide();
+        $("#projectImage").attr('src','/images/'+image[currentImage]);
         $('#projectImage').fadeIn();
-    })
+    });
     if(currentImage == 0) {
         $(".previousImage").hide();  
-    }
+    };
 };
