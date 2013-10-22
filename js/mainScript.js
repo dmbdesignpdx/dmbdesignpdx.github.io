@@ -178,7 +178,7 @@ function nextImage(){
     currentImage ++;
     $("#projectImage").fadeOut(function(){
         $("#projectImage").attr('src','/images/'+image[currentImage]);
-        $('#projectImage').fadeIn();
+        $('#projectImage').delay(250).fadeIn();
     });
     $(".previousImage").show();
     if(currentImage == image.length -1) {
@@ -194,7 +194,7 @@ function prevImage(){
     currentImage --;
     $("#projectImage").fadeOut(function(){
         $("#projectImage").attr('src','/images/'+image[currentImage]);
-        $('#projectImage').fadeIn();
+        $('#projectImage').delay(250).fadeIn();
     });
     if(currentImage == 0) {
         $(".previousImage").hide();  
