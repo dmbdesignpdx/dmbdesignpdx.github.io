@@ -33,23 +33,23 @@ function size() {
     }
     switch (true) {
         case smallScreen :
-            $(".dmbAbout").css('bottom', '-960px');
+            $(".DanielBlakeDesignAbout").css('bottom', '-960px');
             $("#13").hide();
             $("#14").hide();
             $("#15").hide();
             break;
         case mediumScreen :
-            $(".dmbAbout").css('bottom', '-800px');
+            $(".DanielBlakeDesignAbout").css('bottom', '-800px');
             break;
         default :
-            $(".dmbAbout").css('bottom', '-500px');
+            $(".DanielBlakeDesignAbout").css('bottom', '-500px');
             $("#13").show();
             $("#14").show();
             $("#15").show();
             break;
     }
     if((smallScreen && aboutInfo) || (!smallScreen && aboutInfo)) {
-        $(".dmbAbout").css('bottom', '0px');
+        $(".DanielBlakeDesignAbout").css('bottom', '0px');
     }
     containerPos();
 }
@@ -89,7 +89,7 @@ $(".thumbBox").hover(function() {
 
 function showAbout() {
     if(!aboutInfo) {
-        $(".dmbAbout").animate({bottom: "0px"}, 1200);
+        $(".DanielBlakeDesignAbout").animate({bottom: "0px"}, 1200);
         aboutInfo = true;
         $(".dinfo").html("CLOSE");
     }
@@ -98,13 +98,13 @@ function showAbout() {
         $(".dinfo").html("ABOUT");
         switch(true) {
             case smallScreen :
-                $(".dmbAbout").animate({bottom: "-960px"}, 1200);
+                $(".DanielBlakeDesignAbout").animate({bottom: "-960px"}, 1200);
                 break;
             case mediumScreen :
-                 $(".dmbAbout").animate({bottom: "-800px"}, 1200);
+                 $(".DanielBlakeDesignAbout").animate({bottom: "-800px"}, 1200);
                  break;
             default :
-                $(".dmbAbout").animate({bottom: "-500px"}, 1200);
+                $(".DanielBlakeDesignAbout").animate({bottom: "-500px"}, 1200);
                 break;
         }
     }

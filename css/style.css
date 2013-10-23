@@ -39,12 +39,13 @@ html, body {
     margin-top: 0px;
 }
 
-.dmbAbout {
+.DanielBlakeDesignAbout {
     width: 800px;
     height: 500px;
     bottom: -500px;
     position: absolute;
     background-color: #eee;
+    z-index: 2;
 }
 
 .projects {
@@ -162,6 +163,7 @@ html, body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    z-index: 1;
 }
 
 .posterInfo {
@@ -280,7 +282,7 @@ p.pinfo {
     left: 10px;
 }
 
-p.AboutDanielBlakeDesign {
+p.DanielBlakeDesignAboutCopy {
     font-weight: 400;
     line-height: 1.2em;
     width: 662px;
@@ -386,7 +388,7 @@ body {
     margin-bottom: 2px;
 }
 
-.dmbAbout {
+.DanielBlakeDesignAbout {
     width: 320px;
     height: 960px;
     bottom: -330px;
@@ -460,7 +462,7 @@ body {
     margin-bottom: 2px;
 }
 
-.dmbAbout {
+.DanielBlakeDesignAbout {
     width: 480px;
     height: 800px;
     bottom: -800px;
