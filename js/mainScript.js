@@ -177,8 +177,9 @@ function nextImage(){
     };
     currentImage ++;
     $("#projectImage").fadeOut(function(){
-        $("#projectImage").attr('src','/images/'+image[currentImage]);
-        $('#projectImage').delay(250).fadeIn();
+        $("#projectImage").load(function(){
+            $('#projectImage').fadeIn();
+        }).attr('src','/images/'+image[currentImage]);
     });
     $(".previousImage").show();
     if(currentImage == image.length -1) {
@@ -193,8 +194,9 @@ function prevImage(){
     $(".nextImage").show();
     currentImage --;
     $("#projectImage").fadeOut(function(){
-        $("#projectImage").attr('src','/images/'+image[currentImage]);
-        $('#projectImage').delay(250).fadeIn();
+        $("#projectImage").load(function(){
+             $('#projectImage').fadeIn();
+        }).attr('src','/images/'+image[currentImage]);
     });
     if(currentImage == 0) {
         $(".previousImage").hide();  
