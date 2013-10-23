@@ -40,6 +40,9 @@ function size() {
             break;
         case mediumScreen :
             $(".DanielBlakeDesignAbout").css('bottom', '-800px');
+            $("#13").show();
+            $("#14").show();
+            $("#15").show();
             break;
         default :
             $(".DanielBlakeDesignAbout").css('bottom', '-500px');
@@ -48,7 +51,7 @@ function size() {
             $("#15").show();
             break;
     }
-    if((smallScreen && aboutInfo) || (!smallScreen && aboutInfo)) {
+    if(aboutInfo) {
         $(".DanielBlakeDesignAbout").css('bottom', '0px');
     }
     containerPos();
