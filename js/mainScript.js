@@ -7,6 +7,7 @@ var projImageHeight, projImageHeightDivided, windowHeightDivided, projImagePosit
 var thisProjImg;
 var thisThumb;
 
+$(".loading").hide();
 
 function size() {
     wH = $(window).height();
@@ -177,7 +178,9 @@ function nextImage(){
     };
     currentImage ++;
     $("#projectImage").fadeOut(function(){
+        $(".loading").show();
         $("#projectImage").load(function(){
+            $(".loading").hide();
             $('#projectImage').fadeIn();
         }).attr('src','/images/'+image[currentImage]);
     });
@@ -194,8 +197,10 @@ function prevImage(){
     $(".nextImage").show();
     currentImage --;
     $("#projectImage").fadeOut(function(){
+        $(".loading").show();
         $("#projectImage").load(function(){
-             $('#projectImage').fadeIn();
+            $(".loading").hide();
+            $('#projectImage').fadeIn();
         }).attr('src','/images/'+image[currentImage]);
     });
     if(currentImage == 0) {
