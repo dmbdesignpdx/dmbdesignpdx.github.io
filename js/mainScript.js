@@ -37,18 +37,21 @@ function size() {
             $("#13").hide();
             $("#14").hide();
             $("#15").hide();
+            $("#instagram").attr('style','margin-right:15px');
             break;
         case mediumScreen :
             $(".DanielBlakeDesignAbout").css('bottom', '-800px');
             $("#13").show();
             $("#14").show();
             $("#15").show();
+            $("#instagram").attr('style','margin-right:15px');
             break;
         default :
             $(".DanielBlakeDesignAbout").css('bottom', '-500px');
             $("#13").show();
             $("#14").show();
             $("#15").show();
+            $("#instagram").attr('style','margin-right:10px');
             break;
     }
     if(aboutInfo) {
@@ -58,12 +61,18 @@ function size() {
 }
 
 function containerPos() {
-    if(wH > 650) {
-        $(".fullcontainer").css('margin-top', (mainPos - 10)+'px');
-    }
-    if(smallScreen)
-    {
-        $(".fullcontainer").css('margin-top', '30px');
+    switch(true){
+        case smallScreen :
+            $(".fullcontainer").css('margin-top', '30px');
+            break;
+        case mediumScreen :
+            $(".fullcontainer").css('margin-top', '50px');
+            break;
+        default :
+            if(wH > 650){
+                $(".fullcontainer").css('margin-top', (mainPos - 10)+'px');
+            }
+            break;
     }
 }
 
@@ -75,7 +84,7 @@ $(".thumbBox").hover(function() {
     var prevDiv = $("#second", "#"+divMin);
     var thisDivName = $(this).attr('name');
     if(!smallScreen && !mediumScreen) {
-        $("img").not($("img", this)).not($(".projects")).stop().fadeTo(400, .08);
+        $("img").not($("img", this)).not($(".projects")).not($("img",".social")).stop().fadeTo(400, .08);
         if(this.id != "5" || this.id != "10" || this.id != "15") {
             nextDiv.stop().animate({top: "0px"}, 400);
         }

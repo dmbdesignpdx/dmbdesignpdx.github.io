@@ -116,21 +116,18 @@ html, body {
     opacity: .5;
 }
 
-.linkedin:hover {
+.social:hover {
     opacity: .75;
 }
 
-.linkedin {
+.social {
     width: 20px;
     height: 20px;
-    position: absolute;
+    position: relative;
     z-index: 80;
     float: right;
-    right: 10px;
+    margin-right: 10px;
     cursor: pointer;
-    background-image: url("/images/linkedin.png");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
 }
 
 .line {
@@ -412,8 +409,8 @@ h1.DanielBlakeDesign {
     left: 10px;
 }
 
-.linkedin {
-    top: 4px;
+.social {
+    margin-top: 4px;
 }
 
 .closeProjects {
@@ -486,8 +483,8 @@ h1.DanielBlakeDesign {
     left: 10px;
 }
 
-.linkedin {
-    top: 4px;
+.social {
+    margin-top: 4px;
 }
 
 .closeProjects {
