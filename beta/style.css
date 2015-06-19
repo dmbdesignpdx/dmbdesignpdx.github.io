@@ -1,0 +1,447 @@
+
+/*  ----  GLOBAL VALUES & RESETS  ----  */
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400
+}
+
+div, section, footer, ul, svg {
+    position: relative
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+span {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden
+}
+
+
+/*  ----  STYLE VALUES  ----  */
+
+
+/*  --  NAV  --  */
+
+
+nav {
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 998
+}
+
+#logo {
+    width: auto;
+    height: 45px;
+    padding-bottom: 23px;
+    margin: 24px 0 6px 22px;
+    fill: #FFF;
+    border-bottom: 1px solid white
+}
+
+#nav {
+    z-index: 999
+}
+
+#nav li {
+    width: auto;
+    height: 1em;
+    padding: 12px 0 12px 22px;
+    font-size: 1.2em;
+    line-height: 1em;
+    color: #FFF
+}
+
+
+/*  Actions  */
+
+
+#logo:hover {
+    fill: #000;
+    cursor: pointer
+}
+
+#nav li:hover {
+    font-weight: 700;
+    color: #000;
+    cursor: pointer
+}
+
+
+/*  --  SECTIONS  --  */
+
+
+/*  General  */
+
+
+section {
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+section:first-of-type {
+    background-color: hsl(210,13%,50%);
+    text-align: center
+}
+
+section:nth-of-type(2) {
+    background-color: hsl(174,75%,55%);
+    white-space: nowrap
+}
+
+section:nth-of-type(3) {
+    background-color: hsl(5,96%,72%)
+}
+
+section:nth-of-type(4) {
+    background-color: hsl(203,92%,75%);
+    /*background-color: #87CEFA*/
+}
+
+/*#78899A*/
+
+section:last-of-type {
+    background-color:hsl(212,16%,60%);
+    text-align: center
+
+}
+
+
+/*  Images  */
+
+
+.image {
+    width: 100%;
+    height: 100%;
+    background-size: 77% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+#imac {
+    background-image: url(img/browser.svg)
+}
+
+#icons {
+    background-image: url(img/icons.svg);
+    background-color: #f0e8e3
+}
+
+#thunder {
+    background-image: url(img/diceLogo.svg);
+    background-color: #475571
+}
+
+#macbook {
+    background-image: url(img/macbook.svg)
+}
+
+#iphone {
+    background-image: url(img/iphone.svg)
+}
+
+
+/*  About  */
+
+
+.mid {
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.textBox {
+    width: 800px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden
+}
+
+
+/*  Footer  */
+
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: hsl(0,0%,16%);
+    overflow: hidden
+}
+
+
+/*  Text  */
+
+
+h1, h2, p {
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    line-height: 1em;
+    color: #FFF;
+    margin: 0;
+    text-align: left
+}
+
+h1 b {
+    font-weight: 700;
+    letter-spacing: -0.5pt
+}
+
+section:last-of-type h1 {
+    font-size: 2.8em;
+    font-weight: 700
+}
+
+section:first-of-type h1 {
+    font-size: 4.8em;
+    font-weight: 400;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FFF;
+    letter-spacing: -1.5pt
+}
+
+section:nth-of-type(5) p {
+    margin: 20px 0 30px;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    letter-spacing: .3pt
+}
+
+footer p {
+    margin: 30px 0;
+    color: #BBB;
+    text-align: center;
+    letter-spacing: .5pt
+}
+
+
+
+
+/*  ----  ////  RESIZING  ////  ----  */
+
+
+
+/*  ----  //  1400px  //  ----  */
+
+
+@media screen and (min-width : 1399px) {
+
+
+/*  ----  STYLE VALUES  ----  */
+
+
+/*  --  NAV  --  */
+
+#logo {
+    height: 50px
+}
+
+#nav li {
+    padding: 13px 0 13px 22px;
+    font-size: 1.3em
+}
+
+
+}
+
+
+/*  ----  //  1024px  //  ----  */
+
+
+@media screen and (max-width : 1025px) {
+
+
+/*  ----  STYLE VALUES  ----  */
+
+
+html {
+    -webkit-text-size-adjust: 100%
+}
+
+section, li, #logo {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent
+}
+
+
+/*  --  NAV  --  */
+
+#logo {
+    height: 40px
+}
+
+#nav li {
+    padding: 11px 0 11px 22px;
+    font-size: 1.1em
+}
+
+#logo:hover {
+    fill: #FFF;
+    cursor: auto
+}
+
+#nav li:hover {
+    font-weight: 400;
+    color: #FFF;
+    cursor: auto
+}
+
+
+/*  --  SECTIONS  --  */
+
+
+/*  Images  */
+
+
+/*  Text  */
+
+
+.textBox {
+    width: 580px
+}
+
+section:first-of-type h1 {
+    font-size: 4.2em;
+    letter-spacing: -1.5pt
+}
+
+section:last-of-type h1 {
+    font-size: 2.4em
+}
+
+
+}
+
+
+/*  ----  //  768px  //  ----  */
+
+
+@media screen and (max-width : 769px) {
+
+
+/*  ----  STYLE VALUES  ----  */
+
+
+/*  --  SECTIONS  --  */
+
+
+/*  Text  */
+
+
+.textBox {
+    width: 450px
+}
+
+section:first-of-type h1 {
+    font-size: 3.6em;
+    letter-spacing: -1.25pt
+}
+
+
+}
+
+
+/*  ----  //  668px  //  ----  */
+
+
+@media screen and (max-width : 668px) {
+
+
+/*  ----  STYLE VALUES  ----  */
+
+
+/*  --  NAV  --  */
+
+#logo {
+    height: 35px
+}
+
+#nav li {
+    padding: 10px 0 10px 22px;
+    font-size: 1em
+}
+
+
+/*  --  SECTIONS  --  */
+
+
+/*  Text  */
+
+
+.textBox {
+    width: 325px
+}
+
+section:first-of-type h1 {
+    font-size: 3em;
+    letter-spacing: -1pt
+}
+
+
+}
+
+
+/*  ----  //  500px  //  ----  */
+
+
+@media screen and (max-width : 501px) {
+
+
+#logo {
+    height: 30px
+}
+
+#nav li {
+    padding: 10px 0 10px 22px;
+    font-size: .8em
+}
+
+
+.image {
+    background-size: 65% 100%;
+}
+
+
+}
+
+
+
+/*  ----  ////  CSS ANIMATIONS/TRANSITIONS  ////  ----  */
+
+
+.trans {
+    -webkit-transition: 6s;
+    transition: .6s
+}
+
+
+
+/*  ----  ////  CLASSES FOR JAVASCRIPT  ////  ----  */
+
+.on {
+    font-weight: 700 !important;
+    color: #000 !important
+}
+
+.onL {
+    color: #000 !important
+}

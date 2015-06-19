@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="iphone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+<g id="iphone_1_">
+	<path id="band" style="fill:none;stroke:#BCBEC0;stroke-width:2.6747;stroke-miterlimit:10;" d="M301.93,398H198.07
+		c-9.36,0-16.94-7.58-16.94-16.94V118.94c0-9.36,7.58-16.94,16.94-16.94h103.87c9.36,0,16.94,7.58,16.94,16.94v262.12
+		C318.87,390.42,311.29,398,301.93,398z"/>
+	<g>
+		<defs>
+			<path id="body" d="M301.93,398H198.07c-9.36,0-16.94-7.58-16.94-16.94V118.94c0-9.36,7.58-16.94,16.94-16.94h103.87
+				c9.36,0,16.94,7.58,16.94,16.94v262.12C318.87,390.42,311.29,398,301.93,398z"/>
+		</defs>
+		<use xlink:href="#body"  style="overflow:visible;fill:#F3F4F4;"/>
+		<clipPath id="body_1_">
+			<use xlink:href="#body"  style="overflow:visible;"/>
+		</clipPath>
+		
+			<circle id="button" style="clip-path:url(#body_1_);fill:none;stroke:#A7A9AC;stroke-width:0.8916;stroke-miterlimit:10;" cx="250.45" cy="380.84" r="9.81"/>
+		<rect id="screen" x="184.25" y="130.98" style="clip-path:url(#body_1_);fill:#808285;" width="131.95" height="234.48"/>
+		<polygon id="glare" style="opacity:0.2;clip-path:url(#body_1_);fill:#FFFFFF;" points="151.26,414.08 151.26,97.54 300.6,97.54 
+					"/>
+	</g>
+	<path id="speaker" style="fill:#939598;" d="M260.48,121.39h-19.99c-0.74,0-1.34-0.6-1.34-1.34c0-0.74,0.6-1.34,1.34-1.34h19.99
+		c0.74,0,1.34,0.6,1.34,1.34C261.81,120.79,261.21,121.39,260.48,121.39z"/>
+	<circle id="camera_1_" style="fill:#939598;" cx="233.13" cy="120.05" r="1.34"/>
+	<circle id="light" style="fill:#939598;" cx="250.45" cy="111.17" r="2.23"/>
+</g>
+</svg>

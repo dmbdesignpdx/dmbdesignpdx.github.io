@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="imac" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 896 718" style="enable-background:new 0 0 896 718;" xml:space="preserve">
+<g id="imac_1_">
+	<g>
+		<defs>
+			<path id="base" d="M536.3,613.8c0,0,2,86.7,13,90c9.7,2.9,28.3,8.4,32.5,9.6c0.5,0.2,0.8,0.7,0.7,1.2c-0.3,1-1,2.3-2.8,2.3h-264
+				c-1.8,0-2.5-1.4-2.8-2.3c-0.2-0.5,0.1-1.1,0.7-1.2c4.2-1.2,22.8-6.6,32.5-9.6c11-3.3,13-90,13-90H536.3z"/>
+		</defs>
+		<use xlink:href="#base"  style="overflow:visible;fill:#E6E7E8;"/>
+		<clipPath id="base_1_">
+			<use xlink:href="#base"  style="overflow:visible;"/>
+		</clipPath>
+		<rect id="shadow" x="311.6" y="714.7" style="opacity:0.4;clip-path:url(#base_1_);fill:#020000;" width="272.2" height="3.6"/>
+		<rect id="shadow_1_" x="349.7" y="614.8" style="opacity:0.4;clip-path:url(#base_1_);fill:#020000;" width="194" height="21.3"/>
+	</g>
+	<g>
+		<defs>
+			<path id="body" d="M871,615H25c-13.3,0-24-10.7-24-24V25C1,11.7,11.7,1,25,1h846c13.3,0,24,10.7,24,24v566
+				C895,604.3,884.3,615,871,615z"/>
+		</defs>
+		<use xlink:href="#body"  style="overflow:visible;fill:#E6E7E8;"/>
+		<clipPath id="body_1_">
+			<use xlink:href="#body"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#body_1_);">
+			<defs>
+				<rect id="display" x="-7" y="-4.3" width="913" height="538.3"/>
+			</defs>
+			<use xlink:href="#display"  style="overflow:visible;fill:#302E2F;"/>
+			<clipPath id="display_1_">
+				<use xlink:href="#display"  style="overflow:visible;"/>
+			</clipPath>
+			<rect id="screen" x="39" y="35.5" style="clip-path:url(#display_1_);fill:#F2F0E5;" width="818" height="464"/>
+			<polygon id="glare" style="opacity:0.2;clip-path:url(#display_1_);fill:#FFFFFF;" points="0,717 0,0 746,0 			"/>
+		</g>
+	</g>
+</g>
+</svg>
