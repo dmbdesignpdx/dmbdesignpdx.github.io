@@ -77,8 +77,8 @@ window.onscroll = function(){
 
 function sizing(actual) {
 
-    wWidth = Math.round(window.innerWidth),
-    wHeight = Math.round(window.innerHeight);
+    wWidth = window.innerWidth,
+    wHeight = window.innerHeight;
 
     sections.height(wHeight);
 
@@ -98,7 +98,15 @@ function scrollScreen(goto,dis) {
 
     var dur = dis * 300;
 
-    $('html, body').animate({scrollTop:goto},dur)
+    $('html, body').animate({scrollTop:goto},dur, function(){
+
+        $('*:animated').stop();
+
+        clearTimeout($(window).data('scrollEnd'));
+
+        $('html, body').scrollTop(goto) || $(window).scrollTop(goto);
+
+    });
 
 }
 
@@ -151,3 +159,11 @@ $('section:eq(1)').click(function(){
     slider(thisSlider.length,thisSlider)
 
 });
+
+var posTest;
+
+function positionTest(){
+    posTest = $('html, body').scrollTop() || $(window).scrollTop();
+}
+
+positionTest();
