@@ -4,7 +4,8 @@
 
 var wWidth,
 wHeight,
-pos = 0,
+oldPos = $('html, body').scrollTop() || $(window).scrollTop();
+pos = oldPos,
 activeSect = 0,
 selectors = $('[name ^= "sel-"]'),
 sections = $('section');
@@ -18,31 +19,46 @@ window.onscroll = function(){
     pos = $('html, body').scrollTop() || $(window).scrollTop();
 
 
-    //Scroll Snap
+    // Section Position
+
+    for (var i = 0; i < sections.length; i++) {
+
+        var a = sections.eq(i).offset().top - pos,
+        b = wHeight / 2;
+
+        if (b > a && a > -b) {
+
+            activeSect = i;
+
+        }
+
+    }
+
+
+    // Scroll Direction
+
+    if (pos > oldPos) {
+
+    }
+    else {
+
+    }
+
+
+    // Scroll Snap
 
     clearTimeout($(this).data('scrollEnd'));
 
     $(this).data('scrollEnd', setTimeout(function() {
 
-        for (var i = 0; i < sections.length; i++) {
+        oldPos = $('html, body').scrollTop() || $(window).scrollTop();
 
-            var a = sections.eq(i).offset().top - pos,
-            b = wHeight / 2;
-
-            if (b > a && a > -b) {
-
-                activeSect = i;
-
-                scrollScreen(sections.eq(i).offset().top, 1)
-
-            }
-
-        }
+        scrollScreen(sections.eq(activeSect).offset().top, 1)
 
     }, 300));
 
 
-    //Section Highlight
+    // Section Highlight
 
     for (var i = 1; i < selectors.length; i++) {
 
@@ -100,7 +116,7 @@ function scrollScreen(goto,dis) {
 
     $('html, body').animate({scrollTop:goto},dur, function(){
 
-        $('*:animated').stop();
+        $('this:animated').clearQueue().stop();
 
         clearTimeout($(window).data('scrollEnd'));
 
@@ -159,11 +175,3 @@ $('section:eq(1)').click(function(){
     slider(thisSlider.length,thisSlider)
 
 });
-
-var posTest;
-
-function positionTest(){
-    posTest = $('html, body').scrollTop() || $(window).scrollTop();
-}
-
-positionTest();
