@@ -494,3 +494,20 @@ section:first-of-type p {
 .onL {
     color: #000 !important
 }
+
+
+
+
+/*  ----  ////  BETA LABEL  ////  ----  */
+
+p#beta {
+    width: auto;
+    padding: 6px 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: #DDD;
+    background-color: #444;
+    text-align: center;
+    z-index: 999;
+}
