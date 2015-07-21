@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+
+    <meta charset="utf-8">
+
+    <title>Heart</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto+Slab:700|Oleo+Script+Swash+Caps' rel='stylesheet'>
+
+    <style>#heart,#ribbon{display:inline-block}body,html{height:100%;margin:0;padding:0}div,p,section{position:relative}svg{position:absolute;top:0;right:0;bottom:0;left:0;margin:auto}section{width:100%;height:100%;text-align:center}section:first-of-type{overflow-y:scroll}section section{overflow:hidden}#heart,.container,.mid{display:inline-block;vertical-align:middle}#heart{width:200px;height:auto;fill:#db4837;animation-name:beat;animation-duration:2.5s;animation-iteration-count:infinite;-webkit-animation-name:beat;-webkit-animation-duration:2.5s;-webkit-animation-iteration-count:infinite}#ribbon{width:280px;height:auto;top:70px;opacity:0}.ribbonAppear{animation-name:appear;animation-duration:1.5s;animation-fill-mode:forwards;-webkit-animation-name:appear;-webkit-animation-duration:1.5s;-webkit-animation-fill-mode:forwards}#ribbon polygon:nth-child(-n+2),#ribbon rect{fill:#13cff5}#ribbon polygon:nth-child(n+3){fill:#0794b0}#ribbon text{fill:#FFF;font-family:'Roboto Slab','"RobotoSlab';font-weight:700;font-size:11px}#heart path:last-of-type{fill:none;stroke:#FFF;stroke-width:7;stroke-linecap:round}#heart circle{fill:#FFF}.inner:nth-of-type(odd){background-color:#cc4232}.inner:nth-of-type(even){background-color:#f8efe6}.container{width:auto;height:auto}.mid{width:0;height:100%}h1,p{height:auto;margin:0;color:#fff}h1{font-family:'Oleo Script Swash Caps',cursive;width:auto;font-size:4em}p{font-family:'Roboto Condensed',sans-serif;width:400px;font-size:1.4em;font-weight:400;line-height:1.4em;text-align:left}p b{font-weight:700}@keyframes beat{0%,100%{transform:scale(.8,.8)}50%{transform:scale(1.2,1.2)}}@-webkit-keyframes beat{0%,100%{-webkit-transform:scale(.8,.8)}50%{-webkit-transform:scale(1.2,1.2)}}@keyframes appear{to{transform:translateY(-70px);opacity:1}}@-webkit-keyframes appear{to{-webkit-transform:translateY(-60px);opacity:1}}@media screen and (max-width :421px){#heart{width:180px}#ribbon{width:260px}h1{font-size:3em}p{width:300px;font-size:1.2em;line-height:1.3em;letter-spacing:.1pt}p b{line-height:2em}p b:last-of-type{line-height:2.2em}}@media screen and (max-width :340px){#heart{width:150px}#ribbon{width:230px}h1{font-size:2.6em}p{width:250px;font-size:1em;line-height:1.2em;letter-spacing:.1pt}p b{line-height:1.8em}p b:last-of-type{line-height:2em}}</style>
+
+</head>
+
+<body>
+
+    <section id="wrapper">
+
+        <section class="inner">
+
+            <div class="container">
+
+                <h1>I Love You.</h1>
+
+            </div
+
+            ><div class="mid"></div>
+
+        </section>
+
+        <section id="illu" class="inner">
+
+            <svg version="1.1" id="heart" viewBox="0 0 100 91">
+                <path d="M47,88.7c1.6,1.9,4.5,1.9,6.1,0c5.9-6.8,18.4-19.1,21-21.7c9.6-9.6,24.2-20.7,25.8-38.7C101.2,13.6,90.2,0.3,75.4,0C61.4-0.2,50,11,50,25C50,11,38.6-0.2,24.6,0C9.8,0.3-1.2,13.6,0.2,28.3C1.8,46.3,16.4,57.4,26,67C28.6,69.6,41.1,81.9,47,88.7z"/><circle cx="82" cy="15" r="4"/><path d="M86.4,24.9c1.8,4.4,0.5,9.3-2.9,12.3"/>
+            </svg>
+
+            <svg version="1.1" id="ribbon" viewBox="0 0 100 100"><polygon points="100,77 77,77 77,61 100,61 92,69 "/><polygon points="0,77 23,77 23,61 0,61 8,69 "/><polygon points="77,77 88,69 77,67 "/><polygon points="23,77 12,69 23,67 "/><rect x="12" y="53" width="76" height="16"/><text transform="matrix(1 0 0 1 22.6101 64.416)">Two Years</text>
+            </svg>
+
+        </section>
+
+        <section class="inner">
+
+            <div class="container">
+
+                <p><b>Mi Novia,</b><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><b>Love, Tu Novio</b></p>
+
+            </div
+
+            ><div class="mid"></div>
+
+        </section>
+
+    </section>
+
+    <script>var c=document.getElementById("wrapper");c.onscroll=function(){c.scrollTop>document.getElementById("illu").offsetTop-.2*window.innerHeight&&document.getElementById("ribbon").classList.add("ribbonAppear")};</script>
+
+</body>
+</html>
