@@ -9,7 +9,8 @@ scrolling,
 pos = $('html, body').scrollTop() || $(window).scrollTop(),
 activeSect = 0,
 selectors = $('[name ^= "sel-"]'),
-sections = $('section');
+sections = $('section'),
+orChange;
 
 
 // --- FUNCTIONS --- //
@@ -99,12 +100,12 @@ function scrollTimed() {
 
 }
 
-function sizing(actual) {
+function sizing(desktop,mobile) {
 
     wWidth = window.innerWidth,
     wHeight = window.innerHeight;
 
-    if (1025 > wWidth) {
+    if (mobile) {
 
         if (wWidth > wHeight) {
 
@@ -118,7 +119,7 @@ function sizing(actual) {
         }
 
     }
-    else {
+    if (desktop) {
 
         sections.height('100%');
 
@@ -162,7 +163,11 @@ selectors.click(function(){
 
 window.onresize = function(){
 
-    sizing(true)
+    if (window.innerWidth > 1025) {
+
+        sizing(true,false)
+
+    }
 
 };
 
@@ -170,7 +175,20 @@ window.onresize = function(){
 // --- FUNCTION EXECUTIONS --- //
 
 
-sizing(false);
+window.onload = function(){
+
+    if (window.innerWidth > 1025) {
+
+        sizing(true,false)
+
+    }
+    else {
+
+        sizing(false,true)
+
+    }
+
+}
 
 
 
@@ -198,3 +216,16 @@ window.addEventListener('touchend', function(){
     scrollScreen(sections.eq(activeSect).offset().top, 1)
 
 }, false);
+
+
+window.onorientationchange = function () {
+
+    if (1025 > window.innerWidth) {
+
+        sizing(false,true);
+
+        scrollScreen(sections.eq(activeSect).offset().top, 1)
+
+    }
+
+}
