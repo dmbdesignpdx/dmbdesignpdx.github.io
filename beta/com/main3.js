@@ -100,12 +100,17 @@ function scrollTimed() {
 
 }
 
-function sizing(desktop,mobile) {
+function sizing(desktop) {
 
     wWidth = window.innerWidth,
     wHeight = window.innerHeight;
 
-    if (mobile) {
+    if (desktop) {
+
+        sections.height('100%');
+
+    }
+    else {
 
         if (wWidth > wHeight) {
 
@@ -117,11 +122,6 @@ function sizing(desktop,mobile) {
             sections.height('100vh');
 
         }
-
-    }
-    if (desktop) {
-
-        sections.height('100%');
 
     }
 
@@ -165,7 +165,7 @@ window.onresize = function(){
 
     if (window.innerWidth > 1025) {
 
-        sizing(true,false)
+        sizing(true)
 
     }
 
@@ -179,12 +179,12 @@ window.onload = function(){
 
     if (window.innerWidth > 1025) {
 
-        sizing(true,false)
+        sizing(true)
 
     }
     else {
 
-        sizing(false,true)
+        sizing(false)
 
     }
 
@@ -220,12 +220,8 @@ window.addEventListener('touchend', function(){
 
 window.onorientationchange = function () {
 
-    if (1025 > window.innerWidth) {
+    sizing(false);
 
-        sizing(false,true);
-
-        scrollScreen(sections.eq(activeSect).offset().top, 1)
-
-    }
+    scrollScreen(sections.eq(activeSect).offset().top, 1)
 
 }
