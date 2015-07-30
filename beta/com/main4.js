@@ -9,8 +9,7 @@ scrolling,
 pos = $('html, body').scrollTop() || $(window).scrollTop(),
 activeSect = 0,
 selectors = $('[name ^= "sel-"]'),
-sections = $('section'),
-noTap = true;
+sections = $('section');
 
 
 // --- FUNCTIONS --- //
@@ -126,12 +125,13 @@ $('section:eq(1)').click(function(){
 
     var thisSlider = $('.image', this);
 
-    if (Math.abs($(this).offset().top - pos) < 3) {
-        slider(thisSlider.length,thisSlider)
+    scrollScreen($(this).offset().top, 300);
 
-    }
-    else {
-        scrollScreen($(this).offset().top, 300);
-    }
+    // if (Math.abs($(this).offset().top - pos) < 3) {
+    //     slider(thisSlider.length,thisSlider)
+    // }
+    // else {
+    //     scrollScreen($(this).offset().top, 300);
+    // }
 
 });
