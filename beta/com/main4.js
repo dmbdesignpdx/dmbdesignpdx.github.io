@@ -10,45 +10,26 @@ pos = $('html, body').scrollTop() || $(window).scrollTop(),
 activeSect = 0,
 selectors = $('[name ^= "sel-"]'),
 sections = $('section'),
-orChange;
+noTap = true;
 
 
 // --- FUNCTIONS --- //
 
 
-window.onscroll = function(e){
-
-    scrolling = true;
+window.onscroll = function(){
 
     pos = $('html, body').scrollTop() || $(window).scrollTop();
 
-
-    // Section in Focus
-
     for (var i = 0; i < sections.length; i++) {
 
-        var a = sections.eq(i).offset().top - pos,
+        var a = Math.abs(sections[i].offsetTop - pos),
         b = wHeight / 2;
 
-        if (b > a && a > -b) {
+        if (b > a) {
 
             activeSect = i;
 
         }
-
-    }
-
-
-    // Scroll Snap
-
-    if (wWidth > 1025) {
-
-        scrollTimed()
-
-    }
-    else {
-
-        e.preventDefault()
 
     }
 
@@ -86,40 +67,18 @@ window.onscroll = function(e){
 
 }
 
-var scrollTimer;
-
-function scrollTimed() {
-
-    window.clearTimeout(scrollTimer);
-
-    scrollTimer = window.setTimeout(function(){
-
-        scrollScreen(sections.eq(activeSect).offset().top, 1)
-
-    },300);
-
-}
-
 function sizing() {
 
     wWidth = window.innerWidth,
-    wHeight = window.innerHeight;
+    wHeight = window.innerHeight
 
 }
 
-function scrollScreen(goto,dis) {
+function scrollScreen(goto,dis,slider) {
 
     var dur = dis * 300;
 
-    $('html, body').animate({scrollTop:goto},dur, function(){
-
-        $('this:animated').clearQueue().stop();
-
-        window.clearTimeout(scrollTimer);
-
-        $('html, body').scrollTop(goto) || $(window).scrollTop(goto);
-
-    });
+    $('html, body').animate({scrollTop:goto},dur);
 
 }
 
@@ -166,19 +125,13 @@ function slider(amount,object) {
 $('section:eq(1)').click(function(){
 
     var thisSlider = $('.image', this);
-    slider(thisSlider.length,thisSlider)
+
+    if (Math.abs($(this).offset().top - pos) < 3) {
+        slider(thisSlider.length,thisSlider)
+
+    }
+    else {
+        scrollScreen($(this).offset().top, 300);
+    }
 
 });
-
-window.addEventListener('touchend', function(){
-
-    scrollScreen(sections.eq(activeSect).offset().top, 1)
-
-}, false);
-
-
-window.onorientationchange = function () {
-
-    scrollScreen(sections.eq(activeSect).offset().top, 1)
-
-}

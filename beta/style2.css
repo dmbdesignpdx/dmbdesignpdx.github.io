@@ -8,24 +8,24 @@ html, body {
     padding: 0;
     border: none;
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 400
+    font-weight: 400;
 }
 
 div, section, footer, ul, svg {
-    position: relative
+    position: relative;
 }
 
 ul {
     list-style: none;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 span {
     display: block;
     width: 0;
     height: 0;
-    overflow: hidden
+    overflow: hidden;
 }
 
 
@@ -39,11 +39,11 @@ nav {
     width: auto;
     height: auto;
     position: fixed;
-    z-index: 998
+    z-index: 998;
 }
 
 #nav {
-    margin: 24px 0 0 22px
+    margin: 24px 0 0 22px;
 }
 
 #logo {
@@ -52,11 +52,11 @@ nav {
     padding-bottom: 23px;
     margin-bottom: 6px;
     fill: #FFF;
-    border-bottom: 1px solid white
+    border-bottom: 1px solid white;
 }
 
 #nav {
-    z-index: 999
+    z-index: 999;
 }
 
 #nav li {
@@ -65,7 +65,7 @@ nav {
     padding: 12px 0;
     font-size: 1.2em;
     line-height: 1em;
-    color: #FFF
+    color: #FFF;
 }
 
 
@@ -74,13 +74,13 @@ nav {
 
 #logo:hover {
     fill: #000;
-    cursor: pointer
+    cursor: pointer;
 }
 
 #nav li:hover {
     font-weight: 700;
     color: #000;
-    cursor: pointer
+    cursor: pointer;
 }
 
 
@@ -93,21 +93,21 @@ nav {
 section {
     width: 100%;
     height: 100%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 section:first-of-type {
     background-color: hsl(210,13%,50%);
-    text-align: center
+    text-align: center;
 }
 
 section:nth-of-type(2) {
     background-color: hsl(174,75%,55%);
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 section:nth-of-type(3) {
-    background-color: hsl(5,96%,72%)
+    background-color: hsl(5,96%,72%);
 }
 
 section:nth-of-type(4) {
@@ -119,7 +119,7 @@ section:nth-of-type(4) {
 
 section:last-of-type {
     background-color:hsl(212,16%,60%);
-    text-align: center
+    text-align: center;
 
 }
 
@@ -142,20 +142,20 @@ section:last-of-type {
 
 #icons {
     background-image: url(img/icons.svg);
-    background-color: #f0e8e3
+    background-color: #f0e8e3;
 }
 
 #thunder {
     background-image: url(img/diceLogo.svg);
-    background-color: #475571
+    background-color: #475571;
 }
 
 #macbook {
-    background-image: url(img/macbook.svg)
+    background-image: url(img/macbook.svg);
 }
 
 #iphone {
-    background-image: url(img/iphone.svg)
+    background-image: url(img/iphone.svg);
 }
 
 
@@ -166,7 +166,7 @@ section:last-of-type {
     width: 0;
     height: 100%;
     display: inline-block;
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 .textBox {
@@ -174,7 +174,7 @@ section:last-of-type {
     height: auto;
     display: inline-block;
     vertical-align: middle;
-    overflow: hidden
+    overflow: hidden;
 }
 
 
@@ -185,7 +185,7 @@ footer {
     width: 100%;
     height: auto;
     background-color: hsl(0,0%,16%);
-    overflow: hidden
+    overflow: hidden;
 }
 
 
@@ -199,17 +199,17 @@ h1, h2, p {
     line-height: 1em;
     color: #FFF;
     margin: 0;
-    text-align: left
+    text-align: left;
 }
 
 h1 b {
     font-weight: 700;
-    letter-spacing: -0.5pt
+    letter-spacing: -0.5pt;
 }
 
 section:last-of-type h1 {
     font-size: 2.8em;
-    font-weight: 700
+    font-weight: 700;
 }
 
 section:first-of-type h1 {
@@ -217,13 +217,13 @@ section:first-of-type h1 {
     font-weight: 400;
     padding-bottom: 16px;
     border-bottom: 1px solid #FFF;
-    letter-spacing: -1.5pt
+    letter-spacing: -1.5pt;
 }
 
 section:first-of-type p {
     font-size: 1.4em;
     margin: 20px 0 0;
-    letter-spacing: .2pt
+    letter-spacing: .2pt;
 }
 
 section:first-of-type p:after {
@@ -234,14 +234,14 @@ section:nth-of-type(5) p {
     margin: 20px 0 30px;
     font-size: 1.4em;
     line-height: 1.5em;
-    letter-spacing: .3pt
+    letter-spacing: .3pt;
 }
 
 footer p {
     margin: 30px 0;
     color: #BBB;
     text-align: center;
-    letter-spacing: .5pt
+    letter-spacing: .5pt;
 }
 
 
@@ -263,12 +263,12 @@ footer p {
 /*  --  NAV  --  */
 
 #logo {
-    height: 50px
+    height: 50px;
 }
 
 #nav li {
     padding: 13px 0;
-    font-size: 1.3em
+    font-size: 1.3em;
 }
 
 
@@ -285,37 +285,37 @@ footer p {
 
 
 html {
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 
 section, li, #logo {
     -webkit-user-select: none;
     -moz-user-select: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
 }
 
 
 /*  --  NAV  --  */
 
 #logo {
-    height: 40px
+    height: 40px;
 }
 
 #nav li {
     padding: 11px 0;
-    font-size: 1.1em
+    font-size: 1.1em;
 }
 
 #logo:hover {
     fill: #FFF;
-    cursor: auto
+    cursor: auto;
 }
 
 #nav li:hover {
     font-weight: 400;
     color: #FFF;
-    cursor: auto
+    cursor: auto;
 }
 
 
@@ -329,26 +329,42 @@ section, li, #logo {
 
 
 .textBox {
-    width: 580px
+    width: 580px;
 }
 
 section:first-of-type h1 {
     font-size: 4.2em;
-    letter-spacing: -1.5pt
+    letter-spacing: -1.5pt;
 }
 
 section:first-of-type p {
-    font-size: 1.2em
+    font-size: 1.2em;
 }
 
 section:first-of-type p:after {
-    content: 'Tap to see more.'
+    content: 'Tap to focus. Tap again to see more.';
 }
 
 section:last-of-type h1 {
-    font-size: 2.4em
+    font-size: 2.4em;
 }
 
+
+}
+
+@media only screen and (max-width : 1025px) and (orientation : portrait) {
+
+    section {
+        height: 100vh;
+    }
+
+}
+
+@media only screen and (max-width : 1025px) and (orientation : landscape) {
+
+    section {
+        height: 100%;
+    }
 
 }
 
@@ -369,12 +385,12 @@ section:last-of-type h1 {
 
 
 .textBox {
-    width: 450px
+    width: 450px;
 }
 
 section:first-of-type h1 {
     font-size: 3.6em;
-    letter-spacing: -1.25pt
+    letter-spacing: -1.25pt;
 }
 
 
@@ -393,12 +409,12 @@ section:first-of-type h1 {
 /*  --  NAV  --  */
 
 #logo {
-    height: 35px
+    height: 35px;
 }
 
 #nav li {
     padding: 10px 0;
-    font-size: 1em
+    font-size: 1em;
 }
 
 
@@ -409,7 +425,7 @@ section:first-of-type h1 {
 
 
 .textBox {
-    width: 325px
+    width: 325px;
 }
 
 section:first-of-type h1 {
@@ -418,7 +434,7 @@ section:first-of-type h1 {
 }
 
 section:first-of-type p {
-    font-size: 1em
+    font-size: 1em;
 }
 
 
@@ -432,15 +448,15 @@ section:first-of-type p {
 
 
 #logo {
-    height: 30px
+    height: 30px;
 }
 
 #nav {
-    margin: 18px 0 0 16px
+    margin: 18px 0 0 16px;
 }
 
 #nav li {
-    font-size: .8em
+    font-size: .8em;
 }
 
 
@@ -457,17 +473,24 @@ section:first-of-type p {
 
 
 .textBox {
-    width: 300px
+    width: 300px;
 }
 
 section:first-of-type h1 {
     font-size: 2.8em;
-    letter-spacing: -1pt
+    letter-spacing: -1pt;
 }
 
 section:first-of-type p {
-    font-size: .9em
+    font-size: .9em;
 }
+
+
+}
+
+
+@media screen and (orientation : portrait) {
+
 
 
 }
@@ -479,7 +502,7 @@ section:first-of-type p {
 
 .trans {
     -webkit-transition: 6s;
-    transition: .6s
+    transition: .6s;
 }
 
 
@@ -488,11 +511,11 @@ section:first-of-type p {
 
 .on {
     font-weight: 700 !important;
-    color: #000 !important
+    color: #000 !important;
 }
 
 .onL {
-    color: #000 !important
+    color: #000 !important;
 }
 
 
@@ -500,7 +523,7 @@ section:first-of-type p {
 
 /*  ----  ////  BETA LABEL  ////  ----  */
 
-p#beta {
+#beta {
     width: auto;
     padding: 6px 10px;
     position: fixed;
