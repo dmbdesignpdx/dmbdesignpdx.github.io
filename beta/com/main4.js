@@ -19,7 +19,7 @@ window.onscroll = function(e){
 
     pos = $('html, body').scrollTop() || $(window).scrollTop();
 
-    if (1030 > window.innerHeight) {
+    if (1030 > window.innerWidth) {
         e.preventDefault();
     }
 
