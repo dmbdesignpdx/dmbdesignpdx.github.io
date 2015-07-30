@@ -128,8 +128,7 @@ function slider(amount,object) {
 $('section:eq(1)').click(function(){
 
     var thisSlider = $('.image', this);
-
-    scrollScreen($(this).offset().top, 300);
+    slider(thisSlider.length,thisSlider)
 
     // if (Math.abs($(this).offset().top - pos) < 3) {
     //     slider(thisSlider.length,thisSlider)
