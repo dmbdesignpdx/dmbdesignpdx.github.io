@@ -355,7 +355,7 @@ section:last-of-type h1 {
 @media only screen and (max-width : 1025px) and (orientation : portrait) {
 
     section {
-        height: 100vh;
+        height: 100vh !important;
     }
 
 }
@@ -363,7 +363,7 @@ section:last-of-type h1 {
 @media only screen and (max-width : 1025px) and (orientation : landscape) {
 
     section {
-        height: 100%;
+        height: 100% !important;
     }
 
 }
