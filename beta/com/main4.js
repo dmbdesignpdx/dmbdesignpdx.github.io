@@ -15,9 +15,13 @@ sections = $('section');
 // --- FUNCTIONS --- //
 
 
-window.onscroll = function(){
+window.onscroll = function(e){
 
     pos = $('html, body').scrollTop() || $(window).scrollTop();
+
+    if (1030 > window.innerHeight) {
+        e.preventDefault();
+    }
 
     for (var i = 0; i < sections.length; i++) {
 
