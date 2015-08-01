@@ -11,6 +11,10 @@ html, body {
     font-weight: 400;
 }
 
+body {
+    min-height: 100%;
+}
+
 div, section, footer, ul, svg {
     position: relative;
 }
@@ -330,6 +334,25 @@ section, li, #logo {
     font-size: 2.4em;
 }
 
+
+}
+
+
+
+
+@media screen and (max-width : 1025px) and (orientation : landscape) {
+
+    section {
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width : 1025px) and (orientation : portrait) {
+
+    section {
+        height: 100vh;
+    }
 
 }
 
