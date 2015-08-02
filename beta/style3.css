@@ -300,11 +300,13 @@ section, li, #logo, #menu, #menuOff {
 
 #logo {
     left: -100%;
+    transition: -webkit-transform .6s;
     -webkit-transition: -webkit-transform .6s;
 }
 
 #nav li {
     left: -100%;
+    transition: -webkit-transform .6s;
     -webkit-transition: -webkit-transform .6s;
 }
 
@@ -321,14 +323,17 @@ section, li, #logo, #menu, #menuOff {
 
 #menu {
     left: 0;
+    transition: -webkit-transform .6s;
     -webkit-transition: -webkit-transform .6s;
 }
 
 .offScreen {
+    transform: translateX(-116%);
     -webkit-transform: translateX(-116%);
 }
 
 .onScreen {
+    transform: translateX(100%);
     -webkit-transform: translateX(100%);
 }
 
