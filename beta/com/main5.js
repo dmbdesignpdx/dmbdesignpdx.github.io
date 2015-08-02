@@ -125,3 +125,9 @@ $('#work').click(function(){
     thisSlider.css({'-webkit-transform':'translateX(-'+num+'00%)','transform':'translateX(-'+num+'00%)'});
 
 });
+
+$('#menu').click(function(){
+
+    
+
+})

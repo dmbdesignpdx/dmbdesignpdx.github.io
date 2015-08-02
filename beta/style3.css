@@ -15,7 +15,7 @@ body {
     min-height: 100%;
 }
 
-div, section, footer, ul, svg {
+div, section, footer, ul, svg, li {
     position: relative;
 }
 
@@ -53,10 +53,6 @@ nav {
     fill: #FFF;
 }
 
-#nav {
-    z-index: 999;
-}
-
 #nav li {
     width: auto;
     height: 1em;
@@ -64,6 +60,15 @@ nav {
     font-size: 1.2em;
     line-height: 1em;
     color: #FFF;
+}
+
+#menu {
+    width: 0;
+    height: 0;
+    margin: 20px;
+    position: absolute;
+    background-color: #FFF;
+    z-index: 997;
 }
 
 
@@ -281,11 +286,13 @@ section, li, #logo {
 #logo {
     height: 40px;
     padding: 26px 22px 11px;
+    left: -100%;
 }
 
 #nav li {
     padding: 11px 22px;
     font-size: 1.1em;
+    left: -100%;
 }
 
 #logo:hover {
@@ -297,6 +304,11 @@ section, li, #logo {
     font-weight: 400;
     color: #FFF;
     cursor: auto;
+}
+
+#menu {
+    width: 45px;
+    height: 45px;
 }
 
 
