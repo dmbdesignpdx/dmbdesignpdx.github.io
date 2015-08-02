@@ -46,17 +46,11 @@ nav {
     z-index: 998;
 }
 
-#nav {
-    margin: 24px 0 0 22px;
-}
-
 #logo {
     width: auto;
     height: 45px;
-    padding-bottom: 23px;
-    margin-bottom: 6px;
+    padding: 28px 24px 12px;
     fill: #FFF;
-    border-bottom: 1px solid white;
 }
 
 #nav {
@@ -66,7 +60,7 @@ nav {
 #nav li {
     width: auto;
     height: 1em;
-    padding: 12px 0;
+    padding: 12px 24px;
     font-size: 1.2em;
     line-height: 1em;
     color: #FFF;
@@ -249,10 +243,11 @@ footer p {
 
 #logo {
     height: 50px;
+    padding: 30px 26px 13px;
 }
 
 #nav li {
-    padding: 13px 0;
+    padding: 13px 26px;
     font-size: 1.3em;
 }
 
@@ -285,10 +280,11 @@ section, li, #logo {
 
 #logo {
     height: 40px;
+    padding: 26px 22px 11px;
 }
 
 #nav li {
-    padding: 11px 0;
+    padding: 11px 22px;
     font-size: 1.1em;
 }
 
@@ -396,14 +392,7 @@ section, li, #logo {
 
 /*  --  NAV  --  */
 
-#logo {
-    height: 35px;
-}
 
-#nav li {
-    padding: 10px 0;
-    font-size: 1em;
-}
 
 
 /*  --  SECTIONS  --  */
@@ -435,17 +424,6 @@ section, li, #logo {
 @media screen and (max-width : 501px) {
 
 
-#logo {
-    height: 30px;
-}
-
-#nav {
-    margin: 18px 0 0 16px;
-}
-
-#nav li {
-    font-size: .8em;
-}
 
 
 .image {
