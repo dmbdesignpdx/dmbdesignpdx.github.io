@@ -126,8 +126,34 @@ $('#work').click(function(){
 
 });
 
-$('#menu').click(function(){
+document.getElementById('menu').onclick = function(){
 
-    
+    this.classList.add('offScreen');
 
-})
+    document.getElementById('logo').classList.add('onScreen');
+
+    $('li').addClass('onScreen');
+
+    $('#menuOff').css({'width':'100%','height':'100%'});
+
+    $('#menuOff').on('click',hideMenu);
+
+    $('#nav').on('click',hideMenu);
+
+}
+
+function hideMenu(){
+
+    $('#nav').off('click',hideMenu);
+
+    $('#menuOff').off('click',hideMenu);
+
+    $('#menuOff').css({'width':'0','height':'0'});
+
+    document.getElementById('menu').classList.remove('offScreen');
+
+    document.getElementById('logo').classList.remove('onScreen');
+
+    $('li').removeClass('onScreen');
+
+}
