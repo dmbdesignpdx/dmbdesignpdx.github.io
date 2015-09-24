@@ -66,6 +66,14 @@ window.onscroll = function(e){
 
     }
 
+    if (pos < window.innerHeight) {
+        selectors.eq(0).addClass('on')
+    }
+    else {
+        selectors.eq(0).removeClass('on');
+    }
+
+
 }
 
 function scrollScreen(goto,dis) {
@@ -130,8 +138,6 @@ document.getElementById('menu').onclick = function(){
 
     this.classList.add('offScreen');
 
-    document.getElementById('logo').classList.add('onScreen');
-
     $('li').addClass('onScreen');
 
     $('#menuOff').css({'width':'100%','height':'100%'});
@@ -151,8 +157,6 @@ function hideMenu(){
     $('#menuOff').css({'width':'0','height':'0'});
 
     document.getElementById('menu').classList.remove('offScreen');
-
-    document.getElementById('logo').classList.remove('onScreen');
 
     $('li').removeClass('onScreen');
 

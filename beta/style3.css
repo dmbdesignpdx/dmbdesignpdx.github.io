@@ -55,11 +55,16 @@ nav {
 
 #nav li {
     width: 66px;
-    height: 1em;
-    padding: 12px 24px;
+    height: auto;
+    padding: 14px 24px;
     font-size: 1.2em;
     line-height: 1em;
     color: #FFF;
+}
+
+#nav li:first-child {
+    margin-top: 12px;
+    font-size: 1.4em;
 }
 
 #menu {
@@ -79,11 +84,6 @@ nav {
 
 /*  Actions  */
 
-
-#logo:hover {
-    fill: #000;
-    cursor: pointer;
-}
 
 #nav li:hover {
     font-weight: 700;
@@ -113,6 +113,14 @@ section {
 
 #work {
     white-space: nowrap;
+}
+
+#work-two {
+    background-color: hsl(5,96%,72%);
+}
+
+#work-three {
+    background-color: hsl(203,92%,75%);
 }
 
 #contact {
