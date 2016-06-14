@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg id="tri" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<line id="c" x1="50" y1="11" x2="95" y2="89"/>
+<line id="b" x1="5" y1="89" x2="50" y2="11"/>
+<line id="a" x1="95" y1="89" x2="5" y2="89"/>
+</svg>

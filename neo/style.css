@@ -1,0 +1,92 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    min-height: 100%;
+    background: #223
+}
+
+section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: shift 9s linear 1s forwards
+}
+
+object {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    outline: 0;
+    filter: drop-shadow(0 0 12px #F56);
+    animation: blackStretch 2s linear 10s forwards;
+    -webkit-backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translateZ(0);
+}
+
+#tri {
+    fill:none;
+    stroke:#F56;
+    stroke-width:7;
+    stroke-linecap:round;
+    stroke-dasharray: 92;
+    stroke-dashoffset: 92;
+    animation: fadetoBlack 3s linear 10s forwards;
+}
+
+#a {
+    animation: lineGrow 3s linear 1s forwards
+}
+
+#b {
+    animation: lineGrow 3s linear 4s forwards
+}
+
+#c {
+    animation: lineGrow 3s linear 7s forwards
+}
+
+@keyframes lineGrow {
+    to {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes blackStretch {
+    to {
+        filter: drop-shadow(0 0 12px black)
+    }
+}
+
+@keyframes fadetoBlack {
+    to {
+        stroke: black
+    }
+}
+
+@keyframes shift {
+    40% {
+        transform: translateX(0) skewX(0) rotate(0)
+    }
+    41%% {
+        transform: translateX(-15%) skewX(30deg) rotate(10deg)
+    }
+    42%% {
+        transform: translateX(0) skewX(0) rotate(0)
+    }
+    70% {
+        transform: translateY(0) skewY(0)
+    }
+    71% {
+        transform: translateY(-30%) skewY(50deg)
+    }
+    73% {
+        transform: translateY(0) skewY(0)
+    }
+}
