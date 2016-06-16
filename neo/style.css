@@ -14,7 +14,7 @@ section {
     width: 100%;
     height: 100%;
     position: relative;
-    animation: shift 9s linear 1s forwards
+    /*animation: shift 9s linear 1s forwards*/
 }
 
 object {
@@ -23,33 +23,61 @@ object {
     height: 200px;
     margin: auto;
     outline: 0;
-    filter: drop-shadow(0 0 12px #F56);
+    filter: drop-shadow(0 0 14px #F56);
     animation: blackStretch 2s linear 10s forwards;
     -webkit-backface-visibility: hidden;
     transform-style: preserve-3d;
-    transform: translateZ(0);
+    transform: translateY(0);
+    animation: shake 10s linear 1s forwards, staticShift .25s linear 11s forwards
 }
 
-#tri {
+#draw {
     fill:none;
     stroke:#F56;
     stroke-width:7;
     stroke-linecap:round;
-    stroke-dasharray: 92;
-    stroke-dashoffset: 92;
-    animation: fadetoBlack 3s linear 10s forwards;
+    stroke-linejoin:round;
+    stroke-dasharray: 266;
+    stroke-dashoffset: 266;
+    /*animation: fadetoBlack 3s linear 10s forwards;*/
+    animation: lineGrow 10s linear 1s forwards, glowing 5s linear 12s infinite
 }
 
-#a {
-    animation: lineGrow 3s linear 1s forwards
+#static, #first {
+    fill:#F56;
+    stroke:none;
+    opacity: 0
 }
 
-#b {
-    animation: lineGrow 3s linear 4s forwards
+#static {
+    animation: staticShow .25s linear 11s forwards
 }
 
-#c {
-    animation: lineGrow 3s linear 7s forwards
+@keyframes glowing {
+    50% {
+        stroke:#F79;
+    }
+    100% {
+        stroke:#F56;
+    }
+}
+
+@keyframes staticShow {
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes staticShift {
+    50% {
+        transform: translateY(0) skewX(50deg)
+    }
+    100% {
+        transform: translateY(0) skewX(0)
+    }
 }
 
 @keyframes lineGrow {
@@ -70,23 +98,44 @@ object {
     }
 }
 
-@keyframes shift {
-    40% {
-        transform: translateX(0) skewX(0) rotate(0)
+@keyframes shake {
+    0%, 100% {
+        transform: translateY(0)
     }
-    41%% {
-        transform: translateX(-15%) skewX(30deg) rotate(10deg)
+    10%,12%,14%,16%,18%,20%,22%,24% {
+        transform: translateY(-1%)
     }
-    42%% {
-        transform: translateX(0) skewX(0) rotate(0)
+    11%,13%,15%,17%,19%,21%,23%,25% {
+        transform: translateY(1%)
     }
-    70% {
-        transform: translateY(0) skewY(0)
+    26%,28%,30%,32%,34%,36%,38%,40% {
+        transform: translateY(-3%)
     }
-    71% {
-        transform: translateY(-30%) skewY(50deg)
+    27%,29%,31%,33%,35%,37%,39%,41% {
+        transform: translateY(3%)
     }
-    73% {
-        transform: translateY(0) skewY(0)
+    42%,44%,46%,48%,50%,52%,54%,56% {
+        transform: translateY(-5%)
+    }
+    43%,45%,47%,49%,51%,53%,55%,57%{
+        transform: translateY(5%)
+    }
+    58%,60%,62%,64%,66%,68%,70%,72%,74%,76% {
+        transform: translateY(-7%)
+    }
+    59%,61%,63%,65%,67%,69%,71%,73%,75%,77% {
+        transform: translateY(7%)
+    }
+    78%,80%,82%,84%,86%,88% {
+        transform: translateY(-11%)
+    }
+    79%,81%,83%,85%,87%,89% {
+        transform: translateY(11%)
+    }
+    90%,92%,94%,96%,98% {
+        transform: translateY(-18%)
+    }
+    91%,93%,95%,97%,99% {
+        transform: translateY(18%)
     }
 }
