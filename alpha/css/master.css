@@ -14,7 +14,7 @@ body {
 
 header {
     width: 100%;
-    padding: 50px 0 40px
+    padding: 40px 0 30px
 }
 
 footer {
@@ -22,7 +22,7 @@ footer {
     padding: 50px 0
 }
 
-h1, h2, p {
+h1, h2, h3, p {
     width: 100%;
     height: auto;
     margin: 0;
@@ -30,10 +30,13 @@ h1, h2, p {
 }
 
 h1 {
+    font-weight: lighter;
+    font-size: 34px;
     line-height: 1.2em
 }
 
 p {
+    font-size: 18px;
     line-height: 1.5em
 }
 
@@ -41,50 +44,73 @@ h1 ~ p {
     margin-top: 10px
 }
 
-h1 {
-    font-size: 32px;
-}
-
-p {
-    font-size: 18px
-}
-
 .thumb {
     width: 100%;
     height: auto;
-    transition: .3s;
+    position: relative;
     opacity: 0;
-    transform: translateY(200px);
+    transform: translate(0,200px);
+    transform: translate3d(0,200px,0);
+    transition: filter .4s, -webkit-filter .4s;
     animation: startUp .5s forwards;
+    -webkit-backface-visibility: hidden
+}
+
+.info {
+    padding: 0 34px 34px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #FFF;
+    transform: translateY(100%);
+    transition: .4s;
+    pointer-events: none
+}
+
+.thumb:hover {
+    cursor: pointer;
+    -webkit-filter: opacity(90%);
+    filter: opacity(90%);
+}
+
+.thumb:hover + .info {
+    transform: translateY(0)
 }
 
 @keyframes startUp {
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translate3d(0,0,0)
     }
 }
 
 section .row:first-of-type .col-4:first-of-type .thumb {
+    -webkit-animation-delay: .5s;
     animation-delay: .5s
 }
 
 section .row:first-of-type .col-4:nth-of-type(2) .thumb {
+    -webkit-animation-delay: .75s;
     animation-delay: .75s
 }
 
 section .row:first-of-type .col-4:last-of-type .thumb {
+    -webkit-animation-delay: 1s;
     animation-delay: 1s
 }
 
 section .row:last-of-type .col-4:first-of-type .thumb {
+    -webkit-animation-delay: 1.25s;
     animation-delay: 1.25s
 }
 
 section .row:last-of-type .col-4:nth-of-type(2) .thumb {
+    -webkit-animation-delay: 1.5s;
     animation-delay: 1.5s
 }
 
 section .row:last-of-type .col-4:last-of-type .thumb {
+    -webkit-animation-delay: 1.75s;
     animation-delay: 1.75s
 }

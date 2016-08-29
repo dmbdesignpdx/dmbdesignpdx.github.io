@@ -1,11 +1,11 @@
-var hero = document.getElementById('hero');
+var thumbs = document.getElementsByClassName('thumb');
 
-function heroSizing() {
+for (var i = 0; i < thumbs.length; i++) {
 
-    var a = window.innerHeight;
+    thumbs[i].onclick = function() {
 
-    console.lgo(a)
+        // console.log("clicked")
+
+    }
 
 }
-
-heroSizing();
