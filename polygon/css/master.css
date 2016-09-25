@@ -1,0 +1,78 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    min-height: 100%;
+    font-size: 16px;
+    background: #F9F9F9;
+
+}
+
+section, header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 50px 0;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+img, svg, a {
+    display: block
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 auto 20px;
+    fill: #333
+}
+
+#optimized {
+  stroke: #333;
+  stroke-linejoin: round;
+  stroke-width: 16px
+}
+
+h1, h2, h3, p {
+    width: 100%;
+    height: auto;
+    margin: 0
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 1.2em;
+    margin-bottom: .5em
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: lighter;
+    text-align: center
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter
+}
+
+pre {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 28px;
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    background: #E9E9E9;
+    overflow-x: scroll;
+    overflow-y: auto
+}

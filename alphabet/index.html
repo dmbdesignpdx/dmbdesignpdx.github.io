@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Alphabet Test</title>
+
+    <style>
+
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0
+        }
+
+        body {
+
+            min-height: 100%;
+            background: #EEEEF2;
+
+        }
+
+        section {
+            padding: 50px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        .alpha {
+            margin: 50px;
+            background: #DDDDE1
+        }
+
+        .a {
+            width: 0;
+            height: 0;
+            border-bottom: 100px solid #DDDDE1;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            background: none
+        }
+
+        .b {
+            width: 70px;
+            height: 60px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%
+        }
+
+        .b::after {
+            display: block;
+            content: '';
+            width: 80px;
+            height: 70px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            margin-top: 45%;
+            background: #DDDDE1
+        }
+
+        .c {
+            width: 90px;
+            height: 100px;
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%
+        }
+
+        .d {
+            width: 90px;
+            height: 100px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%
+        }
+
+        .e {
+            width: 90px;
+            height: 100px
+        }
+
+        .e::before {
+            display: block;
+            content: '';
+            width: 5px;
+            height: 20px;
+            margin-left: 85px;
+            margin-top: 20px;
+            background: #EEEEF2
+        }
+
+        .e::after {
+            display: block;
+            content: '';
+            width: 5px;
+            height: 20px;
+            margin-left: 85px;
+            margin-top: 20px;
+            background: #EEEEF2
+        }
+
+        .f {
+            width: 90px;
+            height: 100px
+        }
+
+        .f::before {
+            display: block;
+            content: '';
+            width: 5px;
+            height: 20px;
+            margin-left: 85px;
+            margin-top: 20px;
+            background: #EEEEF2
+        }
+
+        .f::after {
+            display: block;
+            content: '';
+            width: 5px;
+            height: 40px;
+            margin-left: 85px;
+            margin-top: 20px;
+            background: #EEEEF2
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section>
+
+        <div class="alpha a"></div>
+
+        <div class="alpha b"></div>
+
+        <div class="alpha c"></div>
+
+        <div class="alpha d"></div>
+
+        <div class="alpha e"></div>
+
+        <div class="alpha f"></div>
+
+    </section>
+
+</body>
+</html>
