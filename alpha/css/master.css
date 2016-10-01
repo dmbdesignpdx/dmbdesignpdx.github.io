@@ -1,3 +1,6 @@
+
+/*  ---  Global  ---  */
+
 html, body {
     height: 100%;
     padding: 0;
@@ -6,33 +9,138 @@ html, body {
 
 body {
     min-height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    background: rgb(250,250,255);
+    font: 16px 'Roboto', sans-serif;
+    background: hsl(270,10%,90%);
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased
 }
 
-img {
+img, svg {
     display: block;
     outline: 0;
     border: 0
 }
 
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+a {
+    display: table;
+    text-decoration: none;
+    outline: 0
+}
+
+a:focus, a:active {
+    outline: 0
+}
+
+section {
+    width: 100%;
+    height: auto;
+    position: relative
+}
+
+h1, h2, h3, p {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    color: hsl(270,10%,40%)
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2em;
+    letter-spacing: -.2pt;
+    line-height: 1em
+}
+
+h3 {
+    font-size: 1em
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6em
+}
+
+h1 ~ p {
+    margin-top: 2em
+}
+
+li a {
+    height: 1em;
+    width: auto;
+    font-size: 1em;
+    color: hsl(270,10%,30%);
+    padding: 6px 2px;
+    line-height: .9em;
+    margin-left: 2em
+}
+
+li a:hover {
+    font-weight: 700;
+    cursor: pointer
+}
+
+
+/*  ---  Navigation  ---  */
+
 nav {
     display: flex;
     width: 100%;
-    height: 110px;
+    height: 56px;
     position: fixed;
     top: 0;
     left: 0;
     align-items: center;
     z-index: 999;
-    background: rgb(250,250,255);
-    transition: .4s
+    background: hsl(270,10%,90%);
+    transition: .5s;
+    border-bottom: 1px solid hsl(270,10%,80%)
 }
 
-.nav-size {
-    height: 60px !important
+#dan {
+    width: 26px;
+    height: auto;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: hsl(270,10%,30%)
+}
+
+#dan::after {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 111%
+}
+
+#dan:hover {
+    background: hsl(270,10%,40%)
+}
+
+.menu-m {
+    align-items: center
+}
+
+
+/*  ---  Header  ---  */
+
+#hero {
+    padding: 380px 0
+}
+
+#hero svg {
+    width: 288px;
+    height: 75px;
+    margin: auto;
+    fill: none;
+    stroke: hsl(260, 10%, 30%);
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round
 }
 
 header {
@@ -40,146 +148,193 @@ header {
     padding: 40px 0 30px
 }
 
-section {
-    width: 100%;
-    height: 100%;
-    padding: 110px 0 0
+
+/*  ---  Work  ---  */
+
+#main {
+    padding: 72px 0;
+    background: hsl(270,10%,94%)
 }
 
-footer {
-    width: 100%;
-    padding: 50px 0
+#main .row {
+    transition: .5s
 }
 
-h1, h2, h3, p {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    color: rgb(30,30,35)
-}
-
-h1 {
-    font-weight: lighter;
-    font-size: 26px;
-    letter-spacing: -.2pt;
-    line-height: 1em;
-}
-
-h3 {
-    font-size: 16px
-}
-
-p {
-    font-size: 11px;
-    line-height: 1.5em
-}
-
-h1 ~ p {
-    margin-top: 10px
-}
-
-#d {
-    width: 100%;
-    height: auto;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    background: #333
-}
-
-#d::after {
-    display: block;
-    content: '';
-    width: 100%;
-    padding-top: 111%
+#main .row:last-of-type {
+    transition-delay: .5s
 }
 
 .container {
     width: 100%;
     height: auto;
+    position: relative;
+    overflow: hidden;
+    background: #000
 }
 
 .thumb {
     width: 100%;
     height: auto;
-    position: relative;
-    -webkit-transition: filter .4s, -webkit-filter .4s, height 1s, width 1s .5s;
-    transition: filter .4s, -webkit-filter .4s, height 1s, width 1s .5s, transform .4s, box-shadow .4s
-}
-
-.startState {
-    pointer-events: none;
-    opacity: 0
-}
-
-.animateIntro {
-    -webkit-animation: startUp .5s forwards;
-    animation: startUp .5s forwards
+    position: relative
 }
 
 .info {
-    padding: 0 34px 34px;
-    box-sizing: border-box;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    color: #FFF;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    -webkit-transition: .4s;
-    transition: .4s;
-    pointer-events: none
-}
-
-.thumb:hover {
-    cursor: pointer;
-    transform: scale(1.05)
-}
-
-.thumb:hover + .info {
-    -webkit-transform: translateY(0);
-    transform: translateY(0)
-}
-
-.enlarge {
+    width: 100%;
+    height: 1em;
     position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 500px;
-    height: 500px
+    margin: auto;
+    opacity: 0;
+    font-size: 2.2em;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1em;
+    color: #FFF;
+    -webkit-transition: .4s;
+    transition: .4s;
+    pointer-events: none;
+    z-index: 1
 }
 
-@keyframes startUp {
+.container:hover {
+    cursor: pointer
+}
+
+.container:hover .thumb {
+    opacity: .75
+}
+
+.container:hover .info {
+    opacity: 1
+}
+
+
+/*  --- About  ---  */
+
+#about {
+    padding: 270px 0
+}
+
+
+/*  --- Footer  ---  */
+
+footer {
+    width: 100%;
+    padding: 50px 0;
+    background: hsl(270,10%,30%);
+}
+
+footer p {
+    font-size: .9em;
+    color: hsl(270,10%,80%)
+}
+
+
+/*  --- JS Classes  ---  */
+
+.onSection {
+    font-weight: 700
+}
+
+.moveRows {
+    opacity: 0
+}
+
+
+
+@media only screen and (max-width : 740px) {
+
+    #hero {
+        padding: 160px 0
+    }
+
+    #hero svg {
+        width: 231px;
+        height: 60px
+    }
+
+    #about {
+        padding: 100px 0
+    }
+
+}
+
+
+
+@media only screen and (max-width : 520px) {
+
+    #hero {
+        padding: 300px 0
+    }
+
+    #hero svg {
+        width: 231px;
+        height: 60px
+    }
+
+    #about {
+        padding: 180px 0
+    }
+
+    #main .row:last-of-type {
+        display: none
+    }
+
+}
+
+
+
+/*  --- Hero Animation  ---  */
+
+@keyframes draw {
     to {
-        opacity: 1
+        stroke-dashoffset: 0
     }
 }
 
-section .row:first-of-type .col-4:first-of-type .thumb {
-    -webkit-animation-delay: .5s;
-    animation-delay: .5s
+#hero svg * {
+    animation: draw 2s .5s forwards
 }
 
-section .row:first-of-type .col-4:nth-of-type(2) .thumb {
-    -webkit-animation-delay: .75s;
-    animation-delay: .75s
+#d {
+    stroke-dasharray: 242;
+    stroke-dashoffset: 242
 }
 
-section .row:first-of-type .col-4:last-of-type .thumb {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s
+#e {
+    stroke-dasharray: 174;
+    stroke-dashoffset: 174
 }
 
-section .row:last-of-type .col-4:first-of-type .thumb {
-    -webkit-animation-delay: 1.25s;
-    animation-delay: 1.25s
+#ea {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48
 }
 
-section .row:last-of-type .col-4:nth-of-type(2) .thumb {
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s
+#s {
+    stroke-dasharray: 228;
+    stroke-dashoffset: 228
 }
 
-section .row:last-of-type .col-4:last-of-type .thumb {
-    -webkit-animation-delay: 1.75s;
-    animation-delay: 1.75s
+#i {
+    stroke-dasharray: 74;
+    stroke-dashoffset: 74
+}
+
+#g {
+    stroke-dasharray: 216;
+    stroke-dashoffset: 216
+}
+
+#ga {
+    stroke-dasharray: 66;
+    stroke-dashoffset: 66
+}
+
+#n {
+    stroke-dasharray: 242;
+    stroke-dashoffset: 242
 }
