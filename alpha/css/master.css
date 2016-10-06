@@ -4,13 +4,14 @@
 html, body {
     height: 100%;
     padding: 0;
-    margin: 0
+    margin: 0;
+    background: hsl(270,10%,90%);
+    background: linear-gradient(0deg,hsl(270,10%,90%) 50%, hsl(270,10%,30%) 50%)
 }
 
 body {
     min-height: 100%;
     font: 16px 'Roboto', sans-serif;
-    background: hsl(270,10%,90%);
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased
 }
@@ -37,7 +38,7 @@ a:focus, a:active {
     outline: 0
 }
 
-section {
+section, header, footer {
     width: 100%;
     height: auto;
     position: relative
@@ -129,38 +130,49 @@ nav {
 /*  ---  Header  ---  */
 
 #hero {
-    padding: 380px 0
+    display: flex;
+    height: 850px;
+    background: hsl(270,10%,90%);
 }
 
 #hero svg {
-    width: 288px;
-    height: 75px;
-    margin: auto;
     fill: none;
     stroke: hsl(260, 10%, 30%);
-    stroke-width: 6;
     stroke-linecap: round;
     stroke-linejoin: round
 }
 
-header {
-    width: 100%;
-    padding: 40px 0 30px
+#design {
+    width: 20%;
+    height: auto;
+    margin: auto;
+    stroke-width: 6
+}
+
+#arrow {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    stroke-width: 6
 }
 
 
 /*  ---  Work  ---  */
 
-#main {
+#work {
     padding: 72px 0;
     background: hsl(270,10%,94%)
 }
 
-#main .row {
+#work .row {
     transition: .5s
 }
 
-#main .row:last-of-type {
+#work .row:last-of-type {
     transition-delay: .5s
 }
 
@@ -169,30 +181,29 @@ header {
     height: auto;
     position: relative;
     overflow: hidden;
-    background: #000
+    background: hsl(270,10%,90%);
+    transition: .4s
 }
 
 .thumb {
     width: 100%;
     height: auto;
-    position: relative
+    position: relative;
+    transition: .4s
 }
 
 .info {
     width: 100%;
     height: 1em;
+    padding-bottom: 28px;
     position: absolute;
-    top: 0;
-    right: 0;
     bottom: 0;
-    left: 0;
-    margin: auto;
     opacity: 0;
-    font-size: 2.2em;
+    font-size: 1.1em;
     text-align: center;
     font-weight: 700;
-    line-height: 1em;
-    color: #FFF;
+    line-height: 1.1em;
+    color: hsl(260, 10%, 30%);
     -webkit-transition: .4s;
     transition: .4s;
     pointer-events: none;
@@ -200,11 +211,8 @@ header {
 }
 
 .container:hover {
-    cursor: pointer
-}
-
-.container:hover .thumb {
-    opacity: .75
+    cursor: pointer;
+    background: hsl(270,10%,86%)
 }
 
 .container:hover .info {
@@ -215,16 +223,16 @@ header {
 /*  --- About  ---  */
 
 #about {
-    padding: 270px 0
+    padding: 270px 0;
+    background: hsl(270,10%,90%);
 }
-
 
 /*  --- Footer  ---  */
 
 footer {
     width: 100%;
     padding: 50px 0;
-    background: hsl(270,10%,30%);
+    background: hsl(270,10%,30%)
 }
 
 footer p {
@@ -251,11 +259,6 @@ footer p {
         padding: 160px 0
     }
 
-    #hero svg {
-        width: 231px;
-        height: 60px
-    }
-
     #about {
         padding: 100px 0
     }
@@ -270,16 +273,11 @@ footer p {
         padding: 300px 0
     }
 
-    #hero svg {
-        width: 231px;
-        height: 60px
-    }
-
     #about {
         padding: 180px 0
     }
 
-    #main .row:last-of-type {
+    #work .row:last-of-type {
         display: none
     }
 
@@ -295,9 +293,28 @@ footer p {
     }
 }
 
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+        stroke: hsl(260, 10%, 30%)
+    }
+    50% {
+        transform: translateY(-20px);
+        stroke: hsl(260, 10%, 60%)
+    }
+    100% {
+        transform: translateY(0px);
+        stroke: hsl(260, 10%, 30%)
+    }
+}
+
 #hero svg * {
     animation: draw 2s .5s forwards
 }
+
+/*#arrow * {
+    animation: bounce 1.5s linear forwards infinite
+}*/
 
 #d {
     stroke-dasharray: 242;
@@ -337,4 +354,16 @@ footer p {
 #n {
     stroke-dasharray: 242;
     stroke-dashoffset: 242
+}
+
+#arrow line:first-of-type {
+    stroke-dasharray: 26;
+    stroke-dashoffset: 26;
+    animation-delay: 2.5s
+}
+
+#arrow line:last-of-type {
+    stroke-dasharray: 26;
+    stroke-dashoffset: 26;
+    animation-delay: 2.5s
 }

@@ -1,13 +1,22 @@
-var main = document.getElementById('main'),
-rows = main.children,
+var work = document.getElementById('work'),
+rows = work.children,
 nav = document.getElementById('nav'),
 about = document.getElementById('about'),
-links = document.getElementsByTagName('li');
+links = document.getElementsByTagName('li'),
+hero = document.getElementById('hero');
+
+function heroSize() {
+
+    var a = window.innerHeight;
+
+    hero.style.height = a+"px"
+
+}
 
 function introAnimations() {
 
     var a = window.pageYOffset,
-    c = main.offsetTop - (window.innerHeight/2);
+    c = work.offsetTop - (window.innerHeight * .6666);
 
     if (a > c) {
 
@@ -26,7 +35,7 @@ function whichSection() {
     var a = window.pageYOffset,
     d = parseInt(window.getComputedStyle(nav).height),
     b = about.offsetTop - d,
-    c = main.offsetTop - d;
+    c = work.offsetTop - d;
 
     if (a < c) {
 
@@ -52,6 +61,8 @@ function whichSection() {
 
 window.onload = function() {
 
+    heroSize();
+
     whichSection()
 
 }
@@ -60,6 +71,22 @@ window.onscroll = function() {
 
     whichSection();
 
-    introAnimations();
+    introAnimations()
+
+}
+
+window.onresize = function() {
+
+    if (window.innerWidth > 1030) {
+
+        heroSize()
+
+    }
+
+}
+
+window.onorientationchange = function() {
+
+    heroSize()
 
 }
