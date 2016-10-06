@@ -153,7 +153,7 @@ nav {
     width: 40px;
     height: 40px;
     position: absolute;
-    bottom: 50px;
+    bottom: 40px;
     right: 0;
     left: 0;
     margin: auto;
@@ -255,12 +255,12 @@ footer p {
 
 @media only screen and (max-width : 740px) {
 
-    #hero {
-        padding: 160px 0
-    }
-
     #about {
         padding: 100px 0
+    }
+
+    #arrow {
+        stroke-width: 4
     }
 
 }
@@ -269,8 +269,8 @@ footer p {
 
 @media only screen and (max-width : 520px) {
 
-    #hero {
-        padding: 300px 0
+    #design {
+        width: 50%
     }
 
     #about {
