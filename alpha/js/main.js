@@ -2,16 +2,8 @@ var work = document.getElementById('work'),
 rows = work.children,
 nav = document.getElementById('nav'),
 about = document.getElementById('about'),
-links = document.getElementsByTagName('li'),
-hero = document.getElementById('hero');
+links = document.getElementsByTagName('li');
 
-function heroSize() {
-
-    var a = window.innerHeight;
-
-    hero.style.height = a+"px"
-
-}
 
 function introAnimations() {
 
@@ -58,10 +50,7 @@ function whichSection() {
 
 }
 
-
 window.onload = function() {
-
-    heroSize();
 
     whichSection()
 
@@ -72,21 +61,5 @@ window.onscroll = function() {
     whichSection();
 
     introAnimations()
-
-}
-
-window.onresize = function() {
-
-    if (window.innerWidth > 1030) {
-
-        heroSize()
-
-    }
-
-}
-
-window.onorientationchange = function() {
-
-    heroSize()
 
 }
