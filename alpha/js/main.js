@@ -9,7 +9,7 @@ function heroSize() {
 
     var a = window.innerHeight;
 
-    hero.style.height = a+"px"
+    hero.style.height = a+"px !important"
 
 }
 
