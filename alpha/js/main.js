@@ -4,7 +4,6 @@ nav = document.getElementById('nav'),
 about = document.getElementById('about'),
 links = document.getElementsByTagName('li');
 
-
 function introAnimations() {
 
     var a = window.pageYOffset,

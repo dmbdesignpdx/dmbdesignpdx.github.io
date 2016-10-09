@@ -12,6 +12,8 @@ html, body {
 body {
     min-height: 100%;
     font: 16px 'Roboto', sans-serif;
+    -webkit-font-size-adjust: none;
+    font-size-adjust: none;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased
 }
@@ -71,21 +73,6 @@ h1 ~ p {
     margin-top: 2em
 }
 
-li a {
-    height: 1em;
-    width: auto;
-    font-size: 1em;
-    color: hsl(270,10%,30%);
-    padding: 6px 2px;
-    line-height: .9em;
-    margin-left: 2em
-}
-
-li a:hover {
-    font-weight: 700;
-    cursor: pointer
-}
-
 
 /*  ---  Navigation  ---  */
 
@@ -119,11 +106,28 @@ nav {
 }
 
 #dan:hover {
-    background: hsl(270,10%,40%)
+    background: hsl(270,10%,40%);
+    background: hsl(165,60%,45%)
 }
 
-.menu-m {
+#menu {
     align-items: center
+}
+
+#menu a {
+    height: 1em;
+    width: auto;
+    font-size: 1em;
+    font-weight: 700;
+    color: hsl(270,10%,40%);
+    padding: 6px 2px;
+    line-height: .9em;
+    margin-left: 2em
+}
+
+#menu a:hover {
+    color: hsl(165,60%,45%);
+    cursor: pointer
 }
 
 
@@ -167,7 +171,7 @@ nav {
 }
 
 #work .row {
-    transition: .5s
+    transition: opacity .5s
 }
 
 #work .row:last-of-type {
@@ -180,14 +184,14 @@ nav {
     position: relative;
     overflow: hidden;
     background: hsl(270,10%,90%);
-    transition: .4s
+    -webkit-transition: color .4s;
+    transition: color .4s
 }
 
 .thumb {
     width: 100%;
     height: auto;
-    position: relative;
-    transition: .4s
+    position: relative
 }
 
 .info {
@@ -202,8 +206,8 @@ nav {
     font-weight: 700;
     line-height: 1.1em;
     color: hsl(260, 10%, 30%);
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: opacity .4s;
+    transition: opacity .4s;
     pointer-events: none;
     z-index: 1
 }
@@ -225,6 +229,16 @@ nav {
     background: hsl(270,10%,90%);
 }
 
+#about a {
+    margin-top: 20px;
+    font-weight: 700;
+    color: hsl(270,10%,30%)
+}
+
+#about a:hover {
+    color: hsl(165,65%,45%)
+}
+
 /*  --- Footer  ---  */
 
 footer {
@@ -238,11 +252,24 @@ footer p {
     color: hsl(270,10%,80%)
 }
 
+footer img {
+    width: 75px;
+    height: auto;
+    margin: 4px 0;
+    -webkit-filter: hue-rotate(270deg) saturate(.1) brightness(1.5);
+    filter: hue-rotate(270deg) saturate(.1) brightness(1.5)
+}
+
+footer img:hover {
+    -webkit-filter: hue-rotate(270deg) saturate(.1) brightness(1.8);
+    filter: hue-rotate(270deg) saturate(.1) brightness(1.8)
+}
+
 
 /*  --- JS Classes  ---  */
 
-.onSection {
-    font-weight: 700
+.onSection a {
+    color: hsl(165,60%,45%) !important
 }
 
 .moveRows {
@@ -251,10 +278,10 @@ footer p {
 
 
 
-@media only screen and (max-width : 740px) {
+@media only screen and (max-width : 740px) and (orientation : landscape) {
 
     #hero {
-        padding: 170px 0
+        padding: 160px 0
     }
 
     #about {
@@ -272,7 +299,7 @@ footer p {
 @media only screen and (max-width : 520px) {
 
     #hero {
-        padding: 310px 0
+        padding: 300px 0
     }
 
     #design {
@@ -308,30 +335,12 @@ footer p {
     }
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateY(0px);
-        stroke: hsl(260, 10%, 30%)
-    }
-    50% {
-        transform: translateY(-20px);
-        stroke: hsl(260, 10%, 60%)
-    }
-    100% {
-        transform: translateY(0px);
-        stroke: hsl(260, 10%, 30%)
-    }
-}
-
 #hero svg * {
-    animation: draw 2s .5s forwards
+    animation: draw 4s .5s forwards
 }
-
-/*#arrow * {
-    animation: bounce 1.5s linear forwards infinite
-}*/
 
 #d {
+    fill:none;
     stroke-dasharray: 242;
     stroke-dashoffset: 242
 }
@@ -352,8 +361,8 @@ footer p {
 }
 
 #i {
-    stroke-dasharray: 74;
-    stroke-dashoffset: 74
+    stroke-dasharray: 76;
+    stroke-dashoffset: 76
 }
 
 #g {
@@ -371,14 +380,7 @@ footer p {
     stroke-dashoffset: 242
 }
 
-#arrow line:first-of-type {
-    stroke-dasharray: 26;
-    stroke-dashoffset: 26;
-    animation-delay: 2.5s
-}
-
-#arrow line:last-of-type {
-    stroke-dasharray: 26;
-    stroke-dashoffset: 26;
-    animation-delay: 2.5s
+#left, #right {
+    stroke-dasharray: 514;
+    stroke-dashoffset: 514
 }
