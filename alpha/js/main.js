@@ -13,7 +13,7 @@ function introAnimations() {
 
         for (var i = 0; i < rows.length; i++) {
 
-            rows[i].classList.remove('moveRows')
+            rows[i].classList.remove('showRows')
 
         }
 

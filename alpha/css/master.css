@@ -4,16 +4,16 @@
 html, body {
     height: 100%;
     padding: 0;
-    margin: 0;
-    background: hsl(270,10%,90%);
-    background: linear-gradient(0deg,hsl(270,10%,90%) 50%, hsl(270,10%,30%) 50%)
+    margin: 0
 }
 
 body {
     min-height: 100%;
     font: 16px 'Roboto', sans-serif;
-    -webkit-font-size-adjust: none;
-    font-size-adjust: none;
+    background: hsl(270,10%,90%);
+    background: linear-gradient(0deg,hsl(270,10%,90%) 50%, hsl(270,10%,30%) 50%);
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased
 }
@@ -40,7 +40,7 @@ a:focus, a:active {
     outline: 0
 }
 
-section, header, footer {
+section, header, footer, nav {
     width: 100%;
     height: auto;
     position: relative
@@ -76,22 +76,26 @@ h1 ~ p {
 
 /*  ---  Navigation  ---  */
 
-nav {
-    display: flex;
-    width: 100%;
-    height: 56px;
+#nav {
     position: fixed;
     top: 0;
     left: 0;
-    align-items: center;
     z-index: 999;
     background: hsl(270,10%,90%);
-    transition: .5s;
     border-bottom: 1px solid hsl(270,10%,80%)
 }
 
+#nav .row {
+    display: flex;
+    align-items: center
+}
+
+#logo, #menu {
+    margin: auto 0
+}
+
 #dan {
-    width: 26px;
+    width: 25px;
     height: auto;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -106,7 +110,6 @@ nav {
 }
 
 #dan:hover {
-    background: hsl(270,10%,40%);
     background: hsl(165,60%,45%)
 }
 
@@ -185,7 +188,7 @@ nav {
     overflow: hidden;
     background: hsl(270,10%,90%);
     -webkit-transition: color .4s;
-    transition: color .4s
+    transition: background .4s
 }
 
 .thumb {
@@ -272,16 +275,20 @@ footer img:hover {
     color: hsl(165,60%,45%) !important
 }
 
-.moveRows {
+.showRows {
     opacity: 0
 }
 
 
 
-@media only screen and (max-width : 740px) and (orientation : landscape) {
+@media only screen and (max-width : 740px) {
 
     #hero {
         padding: 160px 0
+    }
+
+    #menu a {
+        padding: 10px 2px
     }
 
     #about {
@@ -290,6 +297,12 @@ footer img:hover {
 
     #arrow {
         stroke-width: 4
+    }
+
+    .info {
+        padding-bottom: 16px;
+        font-size: 1em;
+        opacity: 1
     }
 
 }
@@ -336,7 +349,7 @@ footer img:hover {
 }
 
 #hero svg * {
-    animation: draw 4s .5s forwards
+    animation: draw 3s .5s forwards
 }
 
 #d {
