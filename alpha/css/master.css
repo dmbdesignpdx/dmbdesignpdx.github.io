@@ -2,13 +2,13 @@
 /*  ---  Global  ---  */
 
 html, body {
-    height: 100%;
+    height: 100vh;
     padding: 0;
     margin: 0
 }
 
 body {
-    min-height: 100%;
+    min-height: 100vh;
     font: 16px 'Roboto', sans-serif;
     background: hsl(270,10%,90%);
     background: linear-gradient(0deg,hsl(270,10%,90%) 50%, hsl(270,10%,30%) 50%);
@@ -141,28 +141,19 @@ h1 ~ p {
     background: hsl(270,10%,90%);
 }
 
-#hero svg {
-    fill: none;
-    stroke: hsl(260, 10%, 30%);
-    stroke-linecap: round;
-    stroke-linejoin: round
-}
-
 #design {
     width: 100%;
     height: auto;
-    stroke-width: 6
+    stroke-width: 8;
+    fill: none;
+    stroke: hsl(260, 10%, 30%);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    overflow: visible;
 }
 
-#arrow {
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    bottom: 40px;
-    right: 0;
-    left: 0;
-    margin: auto;
-    stroke-width: 6
+#hero .green {
+    stroke: hsl(165,60%,45%);
 }
 
 
@@ -343,57 +334,96 @@ footer img:hover {
 /*  --- Hero Animation  ---  */
 
 @keyframes draw {
-    to {
+    100% {
         stroke-dashoffset: 0
     }
 }
 
-#hero svg * {
-    animation: draw 3s .5s forwards
+@keyframes drawChange {
+    50% {
+        stroke: hsl(260, 10%, 30%);
+        stroke-dashoffset: 0
+    }
+    100% {
+        stroke: hsl(165,65%,45%);
+        stroke-dashoffset: 0
+    }
 }
 
-#d {
-    fill:none;
-    stroke-dasharray: 242;
-    stroke-dashoffset: 242
+#design * {
+    animation: draw 2s .5s linear forwards
 }
 
-#e {
-    stroke-dasharray: 174;
-    stroke-dashoffset: 174
+/*#design .green {
+    animation: drawChange 4s .5s linear forwards
+}*/
+
+.d {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 240
 }
 
-#ea {
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48
+.aa {
+    stroke-dasharray: 158;
+    stroke-dashoffset: 158
 }
 
-#s {
-    stroke-dasharray: 228;
-    stroke-dashoffset: 228
+.ab {
+    stroke-dasharray: 46;
+    stroke-dashoffset: 46
 }
 
-#i {
-    stroke-dasharray: 76;
-    stroke-dashoffset: 76
+.n {
+    stroke-dasharray: 236;
+    stroke-dashoffset: 236
 }
 
-#g {
-    stroke-dasharray: 216;
-    stroke-dashoffset: 216
+.i, .ka {
+    stroke-dasharray: 72;
+    stroke-dashoffset: 72
 }
 
-#ga {
-    stroke-dasharray: 66;
-    stroke-dashoffset: 66
+.ea {
+    stroke-dasharray: 172;
+    stroke-dashoffset: 172
 }
 
-#n {
-    stroke-dasharray: 242;
-    stroke-dashoffset: 242
+.eb {
+    stroke-dasharray: 46;
+    stroke-dashoffset: 46
 }
 
-#left, #right {
-    stroke-dasharray: 514;
-    stroke-dashoffset: 514
+.l {
+    stroke-dasharray: 118;
+    stroke-dashoffset: 118
+}
+
+.ba {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200
+}
+
+.bb {
+    stroke-dasharray: 102;
+    stroke-dashoffset: 102
+}
+
+.kb {
+    stroke-dasharray: 70;
+    stroke-dashoffset: 70
+}
+
+.kc, .gb {
+    stroke-dasharray: 56;
+    stroke-dashoffset: 56
+}
+
+.s {
+    stroke-dasharray: 210;
+    stroke-dashoffset: 210
+}
+
+.ga {
+    stroke-dasharray: 194;
+    stroke-dashoffset: 194
 }
