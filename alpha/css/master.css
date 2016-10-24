@@ -142,7 +142,7 @@ h1 ~ p {
 }
 
 #design {
-    width: 100%;
+    width: 200px;
     height: auto;
     stroke-width: 8;
     fill: none;
@@ -152,7 +152,7 @@ h1 ~ p {
     overflow: visible;
 }
 
-#hero .green {
+#design .green {
     stroke: hsl(165,60%,45%);
 }
 
@@ -286,10 +286,6 @@ footer img:hover {
         padding: 100px 0
     }
 
-    #arrow {
-        stroke-width: 4
-    }
-
     .info {
         padding-bottom: 16px;
         font-size: 1em;
@@ -304,11 +300,6 @@ footer img:hover {
 
     #hero {
         padding: 300px 0
-    }
-
-    #design {
-        width: 50%;
-        margin: 0 auto
     }
 
     #about {
@@ -339,24 +330,9 @@ footer img:hover {
     }
 }
 
-@keyframes drawChange {
-    50% {
-        stroke: hsl(260, 10%, 30%);
-        stroke-dashoffset: 0
-    }
-    100% {
-        stroke: hsl(165,65%,45%);
-        stroke-dashoffset: 0
-    }
-}
-
 #design * {
     animation: draw 2s .5s linear forwards
 }
-
-/*#design .green {
-    animation: drawChange 4s .5s linear forwards
-}*/
 
 .d {
     stroke-dasharray: 240;
