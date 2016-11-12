@@ -10,10 +10,7 @@ html, body {
 body {
     min-height: 100vh;
     font: 16px 'Roboto', sans-serif;
-    background: hsl(270,10%,90%);
-    background: linear-gradient(0deg,hsl(270,10%,90%) 50%, hsl(270,10%,30%) 50%);
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+    background: hsl(270,10%,94%);
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased
 }
@@ -78,15 +75,17 @@ h1 ~ p {
 
 #nav {
     position: fixed;
+    width: 100%;
+    height: 56px;
     top: 0;
     left: 0;
     z-index: 999;
-    background: hsl(270,10%,90%);
+    background: hsl(270,10%,94%);
     border-bottom: 1px solid hsl(270,10%,80%)
 }
 
 #nav .row {
-    display: flex;
+    height: 100%;
     align-items: center
 }
 
@@ -94,23 +93,19 @@ h1 ~ p {
     margin: auto 0
 }
 
-#dan {
-    width: 25px;
-    height: auto;
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-    background: hsl(270,10%,30%)
+#d-logo {
+    width: 80%;
+    fill: none;
+    stroke: hsl(270,10%,30%);
+    stroke-width: 6px;
+    overflow: visible
 }
 
-#dan::after {
-    display: block;
-    content: '';
-    width: 100%;
-    padding-top: 111%
-}
-
-#dan:hover {
-    background: hsl(165,60%,45%)
+#logo a:hover #d-logo {
+    fill: hsl(270,10%,30%);
+    fill: hsl(165,60%,45%);
+    fill: none;
+    stroke: hsl(165,60%,45%);
 }
 
 #menu {
@@ -134,42 +129,11 @@ h1 ~ p {
 }
 
 
+
 /*  ---  Header  ---  */
 
 #hero {
-    padding: 370px 0;
-    background: hsl(270,10%,90%);
-}
-
-#design {
-    width: 200px;
-    height: auto;
-    stroke-width: 8;
-    fill: none;
-    stroke: hsl(260, 10%, 30%);
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    overflow: visible;
-}
-
-#design .green {
-    stroke: hsl(165,60%,45%);
-}
-
-
-/*  ---  Work  ---  */
-
-#work {
-    padding: 72px 0;
-    background: hsl(270,10%,94%)
-}
-
-#work .row {
-    transition: opacity .5s
-}
-
-#work .row:last-of-type {
-    transition-delay: .5s
+    padding-top: 102px
 }
 
 .container {
@@ -178,8 +142,68 @@ h1 ~ p {
     position: relative;
     overflow: hidden;
     background: hsl(270,10%,90%);
-    -webkit-transition: color .4s;
-    transition: background .4s
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+#db {
+    width: 202px;
+    height: auto;
+    padding: 224px 0;
+    margin: 0 auto;
+    fill: none;
+    stroke: hsl(260, 10%, 30%);
+    stroke-width: 6px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    overflow: visible
+}
+
+#d1, #d2 {
+    stroke-dasharray: 122;
+    stroke-dashoffset: 122
+}
+
+#b1 {
+    stroke-dasharray: 120;
+    stroke-dashoffset: 120
+}
+
+#b2 {
+    stroke-dasharray: 134;
+    stroke-dashoffset: 134
+}
+
+
+@keyframes draw {
+    33.33% {
+        stroke: hsl(260, 10%, 30%)
+    }
+    100% {
+        stroke-dashoffset: 0;
+        stroke: hsl(165,60%,45%)
+    }
+}
+
+#d1, #d2, #b1, #b2 {
+    animation: draw 1s .5s forwards
+}
+
+
+
+
+/*  ---  Work  ---  */
+
+#work {
+    padding: 84px 0
+}
+
+#work .row {
+    transition: opacity .5s
+}
+
+#work .row:last-of-type {
+    transition-delay: .5s
 }
 
 .thumb {
@@ -206,12 +230,12 @@ h1 ~ p {
     z-index: 1
 }
 
-.container:hover {
+#work .container:hover {
     cursor: pointer;
-    background: hsl(270,10%,86%)
+    background: hsl(270,10%,87%);
 }
 
-.container:hover .info {
+#work .container:hover .info {
     opacity: 1
 }
 
@@ -220,7 +244,7 @@ h1 ~ p {
 
 #about {
     padding: 270px 0;
-    background: hsl(270,10%,90%);
+    /*background: hsl(270,10%,90%);*/
 }
 
 #about a {
@@ -274,6 +298,15 @@ footer img:hover {
 
 @media only screen and (max-width : 740px) {
 
+    body {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%
+    }
+
+    #d-logo {
+        width: 60%
+    }
+
     #hero {
         padding: 160px 0
     }
@@ -318,88 +351,4 @@ footer img:hover {
         padding: 250px 0
     }
 
-}
-
-
-
-/*  --- Hero Animation  ---  */
-
-@keyframes draw {
-    100% {
-        stroke-dashoffset: 0
-    }
-}
-
-#design * {
-    animation: draw 2s .5s linear forwards
-}
-
-.d {
-    stroke-dasharray: 240;
-    stroke-dashoffset: 240
-}
-
-.aa {
-    stroke-dasharray: 158;
-    stroke-dashoffset: 158
-}
-
-.ab {
-    stroke-dasharray: 46;
-    stroke-dashoffset: 46
-}
-
-.n {
-    stroke-dasharray: 236;
-    stroke-dashoffset: 236
-}
-
-.i, .ka {
-    stroke-dasharray: 72;
-    stroke-dashoffset: 72
-}
-
-.ea {
-    stroke-dasharray: 172;
-    stroke-dashoffset: 172
-}
-
-.eb {
-    stroke-dasharray: 46;
-    stroke-dashoffset: 46
-}
-
-.l {
-    stroke-dasharray: 118;
-    stroke-dashoffset: 118
-}
-
-.ba {
-    stroke-dasharray: 200;
-    stroke-dashoffset: 200
-}
-
-.bb {
-    stroke-dasharray: 102;
-    stroke-dashoffset: 102
-}
-
-.kb {
-    stroke-dasharray: 70;
-    stroke-dashoffset: 70
-}
-
-.kc, .gb {
-    stroke-dasharray: 56;
-    stroke-dashoffset: 56
-}
-
-.s {
-    stroke-dasharray: 210;
-    stroke-dashoffset: 210
-}
-
-.ga {
-    stroke-dasharray: 194;
-    stroke-dashoffset: 194
 }

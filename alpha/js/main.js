@@ -37,7 +37,7 @@ function whichSection() {
     else if (a < b) {
 
         links[0].classList.add('onSection');
-        links[1].classList.remove('onSection')
+        links[1].classList.remove('onSection');
 
     }
     else {

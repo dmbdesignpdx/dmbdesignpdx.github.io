@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="utf-8">
+        <title>Colors of Today</title>
+        <style>
+
+            html, body {
+                height: 100vh;
+                padding: 0;
+                margin: 0
+            }
+
+            body {
+                min-height: 100vh;
+                font-size: 8.5vw
+            }
+
+            #box {
+                display: flex;
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                bottom: 20px;
+                left: 20px;
+                margin: auto;
+                flex-wrap: wrap
+            }
+
+            h1, h2, p {
+                height: 1em;
+                text-align: center
+            }
+
+            h1, h2 {
+                width: 100%;
+                position: relative;
+                font-family: 'Abril Fatface';
+                color: #FFF
+            }
+
+            #title {
+                margin: auto 0 0;
+                font-size: 1em
+            }
+
+            #subTitle {
+                margin: .3em 0 auto;
+                font-size: .5em
+            }
+
+            #change {
+                width: 7em;
+                padding: 1em 0;
+                position: absolute;
+                background: #FFF;
+                bottom: 40px;
+                left: 0;
+                right: 0;
+                margin: auto;
+                font-family: sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: .2pt;
+                line-height: 1.1em
+            }
+
+            #change:hover {
+                cursor: pointer;
+                transform: scale(1.06)
+            }
+
+            #change:active {
+                transform: scale(1)
+            }
+
+            @media only screen and (max-width : 1024px) {
+
+                #change:hover {
+                    cursor: default;
+                    transform: scale(1)
+                }
+
+                #change:active {
+                    transform: scale(.94)
+                }
+
+            }
+
+            @media only screen and (max-width : 500px) {
+
+                #title {
+                    font-size: 1.2em
+                }
+
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <section id="box">
+
+            <h1 id="title"></h1>
+            <h2 id="subTitle"></h2>
+            <p id="change" role="button">change</p>
+
+        </section>
+
+    <script>
+
+        var box = document.getElementById('box'),
+        title = document.getElementById('title'),
+        subTitle = document.getElementById('subTitle'),
+        change = document.getElementById('change'),
+        date = new Date(),
+        start = new Date(date.getFullYear(),0,0),
+        dif = date - start,
+        day = Math.floor(dif / 86400000),
+        month = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+        title.innerHTML = month[date.getMonth()]+", "+date.getDate();
+
+        function setColor() {
+
+            var b = Math.floor(Math.random()*(100-10))+10,
+            c = Math.floor(Math.random()*(90-10))+10;
+
+            box.style.backgroundColor = "hsl("+day+","+b+"%,"+c+"%)",
+            change.style.color = "hsl("+day+","+b+"%,"+c+"%)",
+            subTitle.innerHTML = day+"/"+b+"/"+c;
+
+        }
+
+        change.onclick = function(){setColor()}
+
+        setColor()
+
+    </script>
+
+    </body>
+</html>
