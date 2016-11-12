@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta charset="utf-8">
         <title>Colors of Today</title>
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
         <style>
 
             html, body {
@@ -38,7 +39,7 @@
             h1, h2 {
                 width: 100%;
                 position: relative;
-                font-family: 'Abril Fatface';
+                font-family: 'Abril Fatface', serif;
                 color: #FFF
             }
 
@@ -90,10 +91,36 @@
 
             }
 
+            @media only screen and (max-width : 750px) {
+
+                #change {
+                    bottom: 20px
+                }
+
+                #box {
+                    top: 14px;
+                    right: 14px;
+                    bottom: 14px;
+                    left: 14px
+                }
+
+            }
+
             @media only screen and (max-width : 500px) {
 
                 #title {
                     font-size: 1.2em
+                }
+
+                #change {
+                    bottom: 48px
+                }
+
+                #box {
+                    top: 12px;
+                    right: 12px;
+                    bottom: 12px;
+                    left: 12px
                 }
 
             }
