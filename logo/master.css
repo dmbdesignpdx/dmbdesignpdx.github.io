@@ -45,18 +45,18 @@ section {
 
 .logotype {
     width: auto;
-    height: auto;
+    height: 1.1em;
     margin: auto 0 auto 33px;
     font-size: 52px;
     font-weight: 300;
     letter-spacing: -.2pt;
-    line-height: 1.1em;
+    line-height: 1em;
     color: #686C80;
     opacity: 0;
     -webkit-transform: translateX(-80%);
     transform: translateX(-80%);
     -webkit-animation: fadeIn 1s .8s forwards;
-    animation: fadeIn 1s .8s forwards;
+    animation: fadeIn 1s .8s forwards
 }
 
 .red{
@@ -71,29 +71,29 @@ section {
     stroke: #1CA4D1
 }
 
-.signature .red, .signature .green, .signature .blue {
+#signature .red, #signature .green, #signature .blue {
     -webkit-animation: drawLogo .5s .5s linear forwards;
     animation: drawLogo .5s .5s linear forwards
 }
 
-.signature .red, .signature .green {
+#signature .red, #signature .green {
     stroke-dashoffset: 472px;
     stroke-dasharray: 472px
 }
 
-.signature .blue:first-of-type, .signature .blue:last-of-type {
+#signature .blue:first-of-type, #signature .blue:last-of-type {
     stroke-dashoffset: 236px;
     stroke-dasharray: 236px;
     -webkit-animation-duration: .25s;
     animation-duration: .25s
 }
 
-.signature .blue:last-of-type {
+#signature .blue:last-of-type {
     -webkit-animation-delay: .75s;
     animation-delay: .75s
 }
 
-.signature .whole {
+#signature .whole {
     -webkit-transform-origin: 260px 260px;
     transform-origin: 260px 260px;
     -webkit-animation: rotateLogo 1.1s .5s forwards;
