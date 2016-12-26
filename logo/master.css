@@ -15,6 +15,10 @@ svg {
     display: block
 }
 
+img {
+    display: table
+}
+
 section, div, svg, h1 {
     position: relative
 }
@@ -60,18 +64,6 @@ section {
     -webkit-animation: fadeIn 1s .8s forwards;
     animation: fadeIn 1s .8s forwards;
     z-index: 1
-}
-
-.red{
-    stroke: #F0456D
-}
-
-.green {
-    stroke: #08D8A2
-}
-
-.blue {
-    stroke: #1CA4D1
 }
 
 #signature .red, #signature .green, #signature .blue {

@@ -15,7 +15,7 @@ body {
     font-smoothing: antialiased
 }
 
-img, svg {
+img, svg, object {
     display: block;
     outline: 0;
     border: 0
@@ -145,56 +145,52 @@ h1 ~ p {
 }
 
 #signature {
+    display: flex;
     padding: 200px 0
 }
 
-.symbol {
-    width: 120px;
-    height: 120px;
-    fill: none;
-    margin: 0 auto;
-    stroke-width: 78px;
-    stroke-linecap: round;
-    overflow: visible
+#signature object:first-of-type {
+    width: 90px;
+    height: 90px;
+    margin-left: auto
 }
 
-.red{
-    stroke: #F0456D
+#signature object:last-of-type {
+    width: auto;
+    height: 90px;
+    margin-right: auto;
+    opacity: 0;
+    -webkit-transform: translateX(-30%);
+    -webkit-animation: moveLogo .5s 1s forwards
+    transform: translateX(-30%);
+    animation: moveLogo .5s 1s forwards
 }
 
-.green {
-    stroke: #08D8A2
-}
-
-.blue {
-    stroke: #1CA4D1
-}
-
-#signature .red, #signature .green, #signature .blue {
+#symbol #r, #symbol #g, #symbol #b1, #symbol #b2 {
     -webkit-animation: drawLogo .5s .5s linear forwards;
     animation: drawLogo .5s .5s linear forwards
 }
 
-#signature .red, #signature .green {
-    stroke-dashoffset: 472px;
-    stroke-dasharray: 472px
+#symbol #r, #symbol #g {
+    stroke-dashoffset: 194px;
+    stroke-dasharray: 194px
 }
 
-#signature .blue:first-of-type, #signature .blue:last-of-type {
-    stroke-dashoffset: 236px;
-    stroke-dasharray: 236px;
+#symbol #b1, #symbol #b2 {
+    stroke-dashoffset: 97px;
+    stroke-dasharray: 97px;
     -webkit-animation-duration: .25s;
     animation-duration: .25s
 }
 
-#signature .blue:last-of-type {
+#symbol #b2 {
     -webkit-animation-delay: .75s;
     animation-delay: .75s
 }
 
-#signature .whole {
-    -webkit-transform-origin: 260px 260px;
-    transform-origin: 260px 260px;
+#symbol {
+    -webkit-transform-origin: center;
+    transform-origin: center;
     -webkit-animation: rotateLogo 1.1s .5s forwards;
     animation: rotateLogo 1.1s .5s forwards
 }
@@ -226,6 +222,27 @@ h1 ~ p {
     }
 }
 
+@-webkit-keyframes moveLogo {
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
+
+@keyframes moveLogo {
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+}
 
 
 
@@ -314,13 +331,13 @@ footer img {
     width: 75px;
     height: auto;
     margin: 4px 0;
-    -webkit-filter: hue-rotate(270deg) saturate(.1) brightness(1.5);
-    filter: hue-rotate(270deg) saturate(.1) brightness(1.5)
+    -webkit-filter: saturate(0) brightness(1.5);
+    filter: saturate(0) brightness(1.5)
 }
 
 footer img:hover {
-    -webkit-filter: hue-rotate(270deg) saturate(.1) brightness(1.8);
-    filter: hue-rotate(270deg) saturate(.1) brightness(1.8)
+    -webkit-filter: saturate(0) brightness(1.9);
+    filter: saturate(0) brightness(1.9)
 }
 
 
@@ -332,6 +349,20 @@ footer img:hover {
 
 .showRows {
     opacity: 0
+}
+
+
+@media only screen and (max-width : 940px) {
+
+    #signature object:first-of-type {
+        width: 70px;
+        height: 70px
+    }
+
+    #signature object:last-of-type {
+        height: 70px
+    }
+
 }
 
 
@@ -353,6 +384,15 @@ footer img:hover {
 
     #menu a {
         padding: 10px 2px
+    }
+
+    #signature object:first-of-type {
+        width: 60px;
+        height: 60px
+    }
+
+    #signature object:last-of-type {
+        height: 60px
     }
 
     #about {
@@ -381,6 +421,15 @@ footer img:hover {
 
     #work .row:last-of-type {
         display: none
+    }
+
+    #signature object:first-of-type {
+        width: 50px;
+        height: 50px
+    }
+
+    #signature object:last-of-type {
+        height: 50px
     }
 
 }
