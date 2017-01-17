@@ -2,7 +2,9 @@ var work = document.getElementById('work'),
 rows = work.children,
 nav = document.getElementById('nav'),
 about = document.getElementById('about'),
-links = document.getElementsByTagName('li');
+links = document.getElementsByTagName('li'),
+thumbs = document.getElementsByClassName('thumb'),
+viewer = document.getElementById('viewer');
 
 function introAnimations() {
 
@@ -49,11 +51,36 @@ function whichSection() {
 
 }
 
+function openViewer() {
+
+    viewer.classList.add('onView')
+
+}
+
+function closeViewer() {
+
+    viewer.classList.remove('onView')
+
+}
+
+
+
+
+for (var i = 0; i < thumbs.length; i++) {
+
+    thumbs[i].onclick = function() {
+
+        openViewer()
+
+    }
+
+}
+
 window.onload = function() {
 
     whichSection()
 
-}
+};
 
 window.onscroll = function() {
 
@@ -61,4 +88,10 @@ window.onscroll = function() {
 
     introAnimations()
 
-}
+};
+
+viewer.onclick = funcion() {
+
+    closeViewer()
+
+};

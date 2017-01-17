@@ -18,7 +18,8 @@ body {
 img, svg, object {
     display: block;
     outline: 0;
-    border: 0
+    border: 0;
+    overflow: hidden
 }
 
 ul, li {
@@ -112,7 +113,7 @@ h1 ~ p {
     width: auto;
     font-size: 1em;
     font-weight: 700;
-    color: hsl(200,10%,40%);
+    color: hsl(200,9%,40%);
     padding: 6px 2px;
     line-height: .9em;
     margin-left: 2em
@@ -136,16 +137,17 @@ h1 ~ p {
 }
 
 .container {
+    display: flex;
     width: 100%;
     height: auto;
     position: relative;
-    background: hsl(200,10%,91%);
+    background: hsl(200,9%,91%);
     -webkit-transition: .4s;
-    transition: .4s
+    transition: .4s;
+    overflow: hidden;
 }
 
 #signature {
-    display: flex;
     padding: 200px 0
 }
 
@@ -263,7 +265,7 @@ h1 ~ p {
     transition-delay: .5s
 }
 
-.thumb {
+.thumb img {
     width: 100%;
     height: auto;
     position: relative
@@ -274,6 +276,7 @@ h1 ~ p {
     height: 1em;
     padding-bottom: 28px;
     position: absolute;
+    left: 0;
     bottom: 0;
     opacity: 0;
     font-size: 1.1em;
@@ -289,7 +292,7 @@ h1 ~ p {
 
 #work .container:hover {
     cursor: pointer;
-    background: hsl(200,10%,88%);
+    background: hsl(200,9%,88%)
 }
 
 #work .container:hover .info {
@@ -300,8 +303,7 @@ h1 ~ p {
 /*  --- About  ---  */
 
 #about {
-    padding: 270px 0;
-    /*background: hsl(200,10%,90%);*/
+    padding: 270px 0
 }
 
 #about a {
@@ -340,6 +342,18 @@ footer img:hover {
     filter: saturate(0) brightness(1.9)
 }
 
+#viewer {
+    height: 100%;
+    position: fixed;
+    left: -9999px;
+    top: 0;
+    background: #000;
+    z-index: 999;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: left 0s .5s, opacity .5s
+}
+
 
 /*  --- JS Classes  ---  */
 
@@ -349,6 +363,12 @@ footer img:hover {
 
 .showRows {
     opacity: 0
+}
+
+.onView {
+    left: 0 !important;
+    opacity: .7 !important;
+    transition: left 0s 0s, opacity .5s !important
 }
 
 
@@ -378,10 +398,6 @@ footer img:hover {
         width: 60%
     }
 
-    #hero {
-        padding: 160px 0
-    }
-
     #menu a {
         padding: 10px 2px
     }
@@ -395,14 +411,29 @@ footer img:hover {
         height: 60px
     }
 
+    #hero {
+        padding: 65px 0 0
+    }
+
+    #signature {
+        padding: 90px 0
+    }
+
     #about {
-        padding: 100px 0
+        padding: 57px 0
+    }
+
+    #work {
+        padding: 0
     }
 
     .info {
         padding-bottom: 16px;
-        font-size: 1em;
-        opacity: 1
+        font-size: 1em
+    }
+
+    #work .container:hover .info {
+        opacity: 0
     }
 
 }
@@ -411,33 +442,39 @@ footer img:hover {
 
 @media only screen and (max-width : 520px) {
 
-    #hero {
-        padding: 300px 0
-    }
-
-    #about {
-        padding: 180px 0
-    }
-
-    #work .row:last-of-type {
-        display: none
+    #signature {
+        padding: 220px 0
     }
 
     #signature object:first-of-type {
-        width: 50px;
-        height: 50px
+        width: 40px;
+        height: 40px
     }
 
     #signature object:last-of-type {
-        height: 50px
+        height: 40px
+    }
+
+    .thumb img {
+        width: 40%;
+        margin: 0 auto
     }
 
 }
 
 @media only screen and (max-width : 330px) {
 
-    #hero {
-        padding: 250px 0
+    #signature {
+        padding: 180px 0
+    }
+
+    #signature object:first-of-type {
+        width: 34px;
+        height: 34px
+    }
+
+    #signature object:last-of-type {
+        height: 34px
     }
 
 }
