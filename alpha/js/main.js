@@ -90,7 +90,7 @@ window.onscroll = function() {
 
 };
 
-viewer.onclick = funcion() {
+viewer.onclick = function() {
 
     closeViewer()
 

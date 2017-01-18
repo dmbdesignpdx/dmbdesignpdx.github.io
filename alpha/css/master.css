@@ -10,7 +10,7 @@ html, body {
 body {
     min-height: 100vh;
     font: 16px 'Roboto', sans-serif;
-    background: hsl(200,10%,95%);
+    background: hsl(200,12%,95%);
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased
 }
@@ -48,7 +48,7 @@ h1, h2, h3, p {
     width: 100%;
     height: auto;
     margin: 0;
-    color: hsl(200,10%,40%)
+    color: hsl(200,12%,40%)
 }
 
 h1 {
@@ -81,8 +81,8 @@ h1 ~ p {
     top: 0;
     left: 0;
     z-index: 999;
-    background: hsl(200,10%,95%);
-    border-bottom: 1px solid hsl(200,10%,80%)
+    background: hsl(200,12%,95%);
+    border-bottom: 1px solid hsl(200,12%,80%)
 }
 
 #nav .row {
@@ -141,7 +141,8 @@ h1 ~ p {
     width: 100%;
     height: auto;
     position: relative;
-    background: hsl(200,9%,91%);
+    border-radius: 4px;
+    background: hsl(200,12%,91%);
     -webkit-transition: .4s;
     transition: .4s;
     overflow: hidden;
@@ -163,7 +164,7 @@ h1 ~ p {
     margin-right: auto;
     opacity: 0;
     -webkit-transform: translateX(-30%);
-    -webkit-animation: moveLogo .5s 1s forwards
+    -webkit-animation: moveLogo .5s 1s forwards;
     transform: translateX(-30%);
     animation: moveLogo .5s 1s forwards
 }
@@ -283,7 +284,7 @@ h1 ~ p {
     text-align: center;
     font-weight: 700;
     line-height: 1.1em;
-    color: hsl(260, 10%, 30%);
+    color: hsl(260, 12%, 30%);
     -webkit-transition: opacity .4s;
     transition: opacity .4s;
     pointer-events: none;
@@ -292,7 +293,7 @@ h1 ~ p {
 
 #work .container:hover {
     cursor: pointer;
-    background: hsl(200,9%,88%)
+    background: hsl(200,12%,88%)
 }
 
 #work .container:hover .info {
@@ -309,7 +310,7 @@ h1 ~ p {
 #about a {
     margin-top: 20px;
     font-weight: 700;
-    color: hsl(200,10%,30%)
+    color: hsl(200,12%,30%)
 }
 
 #about a:hover {
@@ -321,25 +322,12 @@ h1 ~ p {
 footer {
     width: 100%;
     padding: 50px 0;
-    background: hsl(200,10%,25%)
-}
-
-footer p {
-    font-size: .9em;
-    color: hsl(200,10%,80%)
+    background: hsl(200,12%,24%)
 }
 
 footer img {
     width: 75px;
-    height: auto;
-    margin: 4px 0;
-    -webkit-filter: saturate(0) brightness(1.5);
-    filter: saturate(0) brightness(1.5)
-}
-
-footer img:hover {
-    -webkit-filter: saturate(0) brightness(1.9);
-    filter: saturate(0) brightness(1.9)
+    height: auto
 }
 
 #viewer {
