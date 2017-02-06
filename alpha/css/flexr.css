@@ -1,28 +1,20 @@
-/* Flexr Grid - Beta 5.1.0
+/* Flexr Grid - 0.9.0
 Copyright 2016 Flexr. All rights reserved. More info at flexrgrid.com */
 
-.row, *[class*="col-"], *[class*="logo-"], *[class*="menu-"] {
+.row, *[class*="col-"] {
     height: auto;
     position: relative
 }
 
-.row, *[class*="menu-"] {
-    display: -webkit-flex;
-    display: flex
-}
-
 .row {
+    display: -webkit-flex;
+    display: flex;
     width: 1152px;
     margin: 0 auto;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-justify-content: center;
     justify-content: center
-}
-
-*[class*="menu-"], nav .row {
-    -webkit-justify-content: space-between;
-    justify-content: space-between
 }
 
 .jus-l {
@@ -35,9 +27,13 @@ Copyright 2016 Flexr. All rights reserved. More info at flexrgrid.com */
     justify-content: flex-end
 }
 
-*[class*="col-"], *[class*="logo-"], *[class*="menu-"] {
-    padding: 14px;
+*[class*="col-"] {
+    padding: 15px;
     box-sizing: border-box
+}
+
+.col-x {
+    width: auto
 }
 
 .col-1, .logo-s {
@@ -88,13 +84,21 @@ Copyright 2016 Flexr. All rights reserved. More info at flexrgrid.com */
     width: 99.9996%
 }
 
+.fill {
+    width: 100%
+}
+
+.fill *[class*="col-"] {
+    padding: 0
+}
+
 
 /*   Smaller Desktop Screens & Tablet Landscape   */
 
 @media only screen and (max-width : 1180px) {
 
-    .row {
-        width: calc(100% - 28px)
+    .row:not(.fill) {
+        width: calc(100% - 30px)
     }
 
 }
@@ -104,11 +108,11 @@ Copyright 2016 Flexr. All rights reserved. More info at flexrgrid.com */
 
 @media only screen and (max-width : 940px) {
 
-    .row {
+    .row:not(.fill) {
         width: calc(100% - 24px)
     }
 
-    *[class*="col-"], *[class*="logo-"], *[class*="menu-"] {
+    *[class*="col-"] {
         padding: 12px
     }
 
@@ -135,12 +139,12 @@ Copyright 2016 Flexr. All rights reserved. More info at flexrgrid.com */
 
 @media only screen and (max-width : 740px) {
 
-    .row {
-        width: calc(100% - 16px)
+    .row:not(.fill) {
+        width: calc(100% - 18px)
     }
 
-    *[class*="col-"], *[class*="logo-"], *[class*="menu-"] {
-        padding: 8px
+    *[class*="col-"] {
+        padding: 9px
     }
 
     .logo-xl {
@@ -172,15 +176,19 @@ Copyright 2016 Flexr. All rights reserved. More info at flexrgrid.com */
     }
 
     .exp .col-1 {
-        width: 50% !important;
+        width: 50%
     }
 
-    .exp .col-1:nth-of-type(odd) {
-        padding-right: 8px
+    .por .col-1 {
+        width: 24.9999%
     }
 
-    .exp .col-1:nth-of-type(even) {
-        padding-left: 8px
+    .por .col-2 {
+        width: 33.3332%
+    }
+
+    .por .col-3 {
+        width: 50%
     }
 
 }

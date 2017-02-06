@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Daniel Blake Design</title>
-    <meta name="description" content="Daniel Blake is a designer and front end developer living in Portland, Oregon.">
+    <meta name="description" content="Daniel Blake is a front-end web designer living in Portland, Oregon.">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,700' rel='stylesheet'>
     <link rel="stylesheet" href="css/flexr.css">
@@ -11,35 +11,31 @@
 </head>
 <body>
 
-    <nav id="nav">
+    <header id="nav">
 
-        <div class="row">
+        <nav class="row">
 
-            <div id="logo" class="logo-s">
+            <ul>
 
-                <a href="#hero" role="button"><img src="img/logo.svg" id="navSym" alt="Daniel Blake Design Symbol"></a>
+                <li class="col-x"><a href="#hero" role="button"><img src="img/logo.svg" id="navSym" alt="Daniel Blake Design Symbol"></a></li>
 
-            </div>
+                <li class="col-x"><a href="#work" role="button">work</a></li>
 
-            <ul id="menu" class="menu-s jus-r">
-
-                <li><a href="#work" role="button">work</a></li>
-
-                <li><a href="#about" role="button">about</a></li>
+                <li class="col-x"><a href="#about" role="button">about</a></li>
 
             </ul>
 
-        </div>
+        </nav>
 
-    </nav>
+    </header>
 
-    <header id="hero">
+    <section id="hero">
 
         <div class="row">
 
             <div class="col-12">
 
-                <div id="signature" class="container">
+                <div class="container">
 
                     <object data="img/logo.svg" type="image/svg+xml"><img src="img/logo.svg" alt="Daniel Blake Design Symbol"></object>
 
@@ -51,101 +47,132 @@
 
         </div>
 
-    </header>
-
-    <section id="work">
-
-        <div class="row">
-
-            <div class="col-4">
-
-                <div class="container thumb" role="button">
-
-                    <img src="img/flexr.png" alt="Flexr Grid Design"/>
-
-                    <h3 class="info">Flexr</h3>
-
-                </div>
-
-            </div>
-
-            <div class="col-4">
-
-                <div class="container thumb" role="button">
-
-                    <img src="img/web-app.png" alt="Flexr Grid Design"/>
-
-                    <h3 class="info">Dice Web App</h3>
-
-                </div>
-
-            </div>
-
-            <div class="col-4">
-
-                <div class="container thumb" role="button">
-
-                    <img src="img/coffee.png" alt="Flexr Grid Design"/>
-
-                    <h3 class="info">Coffee App</h3>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-4">
-
-                <div class="container thumb" role="button">
-
-                    <img src="img/metal.png" alt="Flexr Grid Design"/>
-
-                    <h3 class="info">Simple Metal Posters</h3>
-
-                </div>
-
-            </div>
-
-            <div class="col-4">
-
-                <div class="container thumb" role="button">
-
-                    <img src="img/game.png" alt="Flexr Grid Design"/>
-
-                    <h3 class="info">Game Concepts</h3>
-
-                </div>
-
-            </div>
-
-            <div class="col-4">
-
-                <div class="container thumb" role="button">
-
-                    <img src="img/neo.png" alt="Flexr Grid Design"/>
-
-                    <h3 class="info">Neo Art</h3>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </section>
+
+    <main>
+
+        <section id="work">
+
+            <div class="row">
+
+                <div class="col-4">
+
+                    <div class="container thumb">
+
+                        <a href="#" role="button">
+
+                            <img src="img/flexr.png" alt="Flexr Grid Design"/>
+
+                            <h3 class="info">Flexr</h3>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-4">
+
+                    <div class="container thumb">
+
+                        <a href="#" role="button">
+
+                            <img src="img/web-app.png" alt="Flexr Grid Design"/>
+
+                            <h3 class="info">Dice Web App</h3>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-4">
+
+                    <div class="container thumb">
+
+                        <a href="#" role="button">
+
+                            <img src="img/coffee.png" alt="Flexr Grid Design"/>
+
+                            <h3 class="info">Coffee App</h3>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-4">
+
+                    <div class="container thumb">
+
+                        <a href="#" role="button">
+
+                            <img src="img/metal.png" alt="Flexr Grid Design"/>
+
+                            <h3 class="info">Simple Metal Posters</h3>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-4">
+
+                    <div class="container thumb">
+
+                        <a href="#" role="button">
+
+                            <img src="img/game.png" alt="Flexr Grid Design"/>
+
+                            <h3 class="info">Game Concepts</h3>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-4">
+
+                    <div class="container thumb">
+
+                        <a href="#" role="button">
+
+                            <img src="img/neo.png" alt="Flexr Grid Design"/>
+
+                            <h3 class="info">Neo Art</h3>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
     <section id="about">
 
         <div class="row exp jus-l">
 
-            <div class="col-6">
+            <div class="col-12">
 
                 <h1>Daniel Blake Design</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Hello there! I'm a front-end web designer living in Portland, OR. I am currently the design lead and front-end at <a href="https://dice.services" target="_blank">Dice Services</a>; where I oversee all design and develop some of the front-end.<br><br>
+                <i>Proficient:</i> InDesign, Illustrator, HTML5, CSS3, Sass, JQuery<br>
+                <i>Comfortable:</i> Photoshop, JavaScript, Premiere Pro, After Effects<br>
+                <i>Learning:</i> React.js, All the things</p>
 
                 <a href="mailto:hello@danielblake.design">hello@danielblake.design</a>
 
@@ -163,7 +190,7 @@
 
             <div class="col-2">
 
-                <a href="http://flexrgrid.com" target="_blank"><img src="http://flexrgrid.com/img/flexr-logo-use-white.svg" alt="flexr logo"/></a>
+                <a href="http://flexrgrid.com" target="_blank"><img src="http://flexrgrid.com/img/flexr-logo-use.svg" alt="flexr logo"/></a>
 
             </div>
 

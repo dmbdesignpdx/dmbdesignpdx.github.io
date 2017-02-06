@@ -1,0 +1,135 @@
+//  Imports
+
+@import "variables";
+@import "mixins";
+
+
+//  Global
+
+
+html, body {
+    height: 100vh;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    min-height: 100vh;
+    font: 18px 'Roboto', sans-serif;
+    background: $offWhite;
+    @extend %smoothFont;
+
+    @include break($landscape){
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%
+    }
+}
+
+section, header, footer {
+    @include size(100%,auto);
+    position: relative
+}
+
+img, svg, object {
+    display: block;
+    outline: 0;
+    border: 0;
+    overflow: hidden
+}
+
+ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+a {
+    display: table;
+    outline: 0
+}
+
+p a {
+    display: inline-block
+}
+
+a:focus, a:active {
+    outline: 0
+}
+
+h1, h2, h3, p {
+    @include size(100%,auto);
+    margin: 0;
+    color: $lightGray
+}
+
+h1 {
+    font-weight: 300;
+    font-size: 2em;
+    letter-spacing: -.2pt;
+    line-height: 1em
+}
+
+h3 {
+    font-size: 1em
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6em
+}
+
+h1 ~ p {
+    margin-top: 2em
+}
+
+
+//  Global Classes
+
+@import "classes";
+
+
+//  Navigation
+
+@import "navigation";
+
+
+//  Hero
+
+@import "hero";
+
+
+//  Work
+
+@import "work";
+
+
+/*  --- About  ---  */
+
+@import "about";
+
+
+
+/*  --- Footer  ---  */
+
+footer {
+    width: 100%;
+    padding: 50px 0;
+    background: $darkWhite
+}
+
+footer img {
+    width: 75px;
+    height: auto
+}
+
+#viewer {
+    height: 100%;
+    position: fixed;
+    left: -9999px;
+    top: 0;
+    background: #000;
+    z-index: 999;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: left 0s .5s, opacity .5s
+}

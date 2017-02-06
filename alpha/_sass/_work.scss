@@ -1,0 +1,60 @@
+#work {
+    padding: 84px 0;
+
+    .container {
+
+        img {
+            @include size(100%,auto);
+            @include timing(.4s);
+            position: relative;
+
+            @include break($portrait){
+                width: 40%;
+                margin: 0 auto
+            }
+        }
+
+        .info {
+            @include size(100%,1em);
+            padding: 0 0 1.5em 0;
+            position: absolute;
+            @include where(auto,auto,0,0);
+            opacity: 0;
+            font-size: 1em;
+            text-align: center;
+            font-weight: 700;
+            line-height: 1.1em;
+            color: $turq;
+            @include change(translateY(100%));
+            @include timing(.4s);
+            pointer-events: none;
+            z-index: 1;
+
+            @include break($landscape){
+                padding-bottom: 16px;
+                font-size: 1em
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            .info {
+                opacity: 1;
+                @include change(translateY(0));
+
+                @include break($landscape){
+                    opacity: 0
+                }
+            }
+
+            img {
+                @include change(translateY(-6%))
+            }
+        }
+    }
+
+    @include break($landscape){
+        padding: 0;
+    }
+}

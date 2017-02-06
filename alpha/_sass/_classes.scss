@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    @include size(100%,auto);
+    position: relative;
+    // border-radius: 5px;
+    // background: $darkWhite;
+    overflow: hidden;
+}
+
+%smoothFont {
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased
+}
+
+
+//  JS Classes
+
+.onSection a {
+    color: $turq !important
+}
+
+.showRows {
+    opacity: 0
+}
+
+.onView {
+    left: 0 !important;
+    opacity: .7 !important;
+    transition: left 0s 0s, opacity .5s !important
+}

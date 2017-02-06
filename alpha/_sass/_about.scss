@@ -1,0 +1,33 @@
+#about {
+
+
+    .col-12 {
+        padding: 240px 0;
+        border-top: 1px solid $slightGray;
+
+        @include break($landscape){
+            padding: 57px 0
+        }
+    }
+
+    a {
+        margin: 20px auto 0;
+        font-weight: 700;
+        color: $darkGray;
+
+        &:hover {
+            color: $turq;
+        }
+    }
+
+    p, h1 {
+        width: 700px;
+        margin: 2em auto 0;
+        text-align: center
+    }
+
+    p a {
+        display: inline-block;
+        margin-top: 0
+    }
+}
