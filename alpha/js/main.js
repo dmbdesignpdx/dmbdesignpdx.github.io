@@ -1,27 +1,8 @@
 var work = document.getElementById('work'),
-rows = work.children,
 nav = document.getElementById('nav'),
 about = document.getElementById('about'),
 links = document.getElementsByTagName('li'),
-thumbs = document.getElementsByClassName('thumb'),
-viewer = document.getElementById('viewer');
-
-function introAnimations() {
-
-    var a = window.pageYOffset,
-    c = work.offsetTop - (window.innerHeight * .6666);
-
-    if (a > c) {
-
-        for (var i = 0; i < rows.length; i++) {
-
-            rows[i].classList.remove('showRows')
-
-        }
-
-    }
-
-}
+thumbs = document.getElementsByClassName('thumb');
 
 function whichSection() {
 
@@ -32,38 +13,24 @@ function whichSection() {
 
     if (a < c) {
 
-        links[0].classList.remove('onSection');
-        links[1].classList.remove('onSection')
+        links[1].classList.remove('onSection');
+        links[2].classList.remove('onSection')
 
     }
     else if (a < b) {
 
-        links[0].classList.add('onSection');
-        links[1].classList.remove('onSection');
+        links[1].classList.add('onSection');
+        links[2].classList.remove('onSection');
 
     }
     else {
 
-        links[0].classList.remove('onSection');
-        links[1].classList.add('onSection')
+        links[1].classList.remove('onSection');
+        links[2].classList.add('onSection')
 
     }
 
 }
-
-function openViewer() {
-
-    viewer.classList.add('onView')
-
-}
-
-function closeViewer() {
-
-    viewer.classList.remove('onView')
-
-}
-
-
 
 
 for (var i = 0; i < thumbs.length; i++) {
@@ -84,14 +51,6 @@ window.onload = function() {
 
 window.onscroll = function() {
 
-    whichSection();
-
-    introAnimations()
-
-};
-
-viewer.onclick = function() {
-
-    closeViewer()
+    whichSection()
 
 };
